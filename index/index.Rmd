@@ -1,0 +1,146 @@
+---
+author: 'JOÃO VITOR FERREIRA CAVALCANTE'
+local: NATAL - RN
+date_year: '2024'
+date_month: 'Setembro'
+date_day: '31'
+institution: 'Universidade Federal do Rio Grande do Norte'
+inst_short: 'UFRN'
+division: 'Instituto Metrópole Digital'
+coordinator: Rodrigo Juliani Siqueira Dalmolin
+advisor: Rodrigo Juliani Siqueira Dalmolin
+# If you have more two advisors, un-silence line 7
+#altadvisor: 'Your Other Advisor'
+examiner:
+- title: Prof.
+  name: Examinador 1
+  degree: Dr.
+  institution: Universidade Federal do Rio Grande do Norte
+  inst_short: UFRN
+  role: Interno do Programa
+- title: Prof.
+  name: Examinador 2
+  degree: Dr.
+  institution: Universidade Federal dos Externos
+  inst_short: UFE
+  role: Externo à Instituição
+department: |
+  Programa de Pós-Graduação em Bioinformática
+degree: 'Mestre em Bioinformática'
+level: 'mestrado'
+doc_type: 'Defesa de Mestrado'
+title: 'TÍTULO DE METAGENÔMICA'
+subtitle: 'SUBTÍTULO'
+knit: "bookdown::render_book"
+site: bookdown::bookdown_site
+output: 
+  ufscdown::thesis_pdf:
+    citation_package: biblatex
+    bib_engine: biber
+  # ufscdown::thesis_gitbook: default
+ # ufscdown::thesis_word: default
+#  ufscdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content (e.g., 
+# abstract, acknowledgements) here or use code similar to line 43-44 for the 
+# .RMD files. If you are NOT producing a PDF, you can delete or silence lines 
+# 42-59 in this YAML header.
+abstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), 
+  collapse = '\n  ')`
+palavras-chave: [Palavra-chave 1, Palavra-chave 2]
+foreignabstract: |
+  `r if(knitr:::is_latex_output()) paste(readLines("00-foreignabstract.Rmd"), 
+  collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab 
+# is needed on the line after the `|`.
+keyword: [Keyword 1, Keyword 2]
+epigrafe: |
+  | "Eppur si muove!"  
+  | (Galileu Galilei, 1633)
+# Specify the location of the bibliography below
+bibliography: ["bib/thesis.bib", "bib/references.bib", "bib/pkgs.bib"]
+link-citations: yes
+dedication: |
+  Este trabalho é dedicado a algumas pessoas.
+thanks: |
+  | Gostaria de agradecer sinceramente a todos os que colaboraram à execução 
+  | deste trabalho.
+# If you prefer blank lines between paragraphs, un-silence lines  74-75 (this 
+# requires package tikz)
+#header-includes:
+#- \usepackage{tikz}
+---
+
+<!--
+Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
+metadata used to produce the document.  Be careful with spacing in this header!
+
+If you'd prefer to not include a Dedication, for example, simply delete the 
+section entirely, or silence (add #) them. 
+
+If you have other LaTeX packages you would like to include, delete the # 
+before header-includes and list the packages after hyphens on new lines.
+
+If you'd like to include a comment that won't be produced in your resulting file 
+enclose it in a block like this.
+
+If you receive a duplicate label error after knitting, make sure to delete the 
+index.Rmd file and then knit again.
+-->
+
+```{r include_packages, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE, 
+                      warning = FALSE, fig.ext='png', fig.align='center', 
+                      fig.path = "images/", fig.pos = "H", dev = "png", 
+                      dpi = 600, out.width = "70%")
+type <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+# This chunk ensures that the ufscdown package is
+# installed and loaded. This ufscdown package includes
+# the template files for the thesis.
+if(!require(remotes))
+  install.packages("remotes", repos = "http://cran.rstudio.com")
+if(!require(ufscdown))
+  remotes::install_github("lfpdroubi/ufscdown")
+library(ufscdown)
+```
+
+<!-- On ordering the chapter files:
+There are two options:
+1. Name your chapter files in the order in which you want them to appear (e.g., 
+01-Intro, 02-Data, 03-Conclusions). 
+2. Otherwise, you can specify the order in which they appear in the 
+_bookdown.yml (for PDF only).
+
+Do not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd in the YAML file--
+they are handled in the YAML above differently for the PDF version.
+-->
+
+<!-- The {.unnumbered} option here means that the introduction will be 
+"Chapter 0." You can also use {-} for no numbers
+on chapters.
+-->
+# Introdução {#intro}
+
+
+As orientações aqui apresentadas são baseadas em um conjunto de normas
+elaboradas pela \gls{ABNT}. Além das normas técnicas, a Biblioteca também
+elaborou uma série de tutoriais, guias, *templates* os quais estão disponíveis 
+em seu site, no endereço \url{http://portal.bu.ufsc.br/normalizacao/}.
+
+Paralelamente ao uso deste *template* recomenda-se que seja utilizado o
+**Tutorial de Trabalhos Acadêmicos** (disponível neste 
+[link](\url{https://repositorio.ufsc.br/handle/123456789/180829)) e/ou que o 
+discente **participe das capacitações oferecidas da Biblioteca Universitária da 
+UFSC**.
+
+Este *template* está configurado apenas para a impressão utilizando o
+anverso das folhas, caso você queira imprimir usando a frente e o verso,
+acrescente a opção *openright* e mude de *oneside* para
+*twoside* nas configurações da classe *abntex2* no início do
+arquivo principal *main.tex* [@abntex2classe].
+
+Conforme a [Resolução NORMATIVA nº 46/2019/CPG](https://repositorio.ufsc.br/bitstream/handle/123456789/197121/RN46.2019.pdf?sequence=1&isAllowed=y)
+as dissertações e teses não serão mais entregues em formato impresso na 
+Biblioteca Universitária. Consulte o Repositório Institucional da UFSC ou sua 
+Secretaria de Pós Graduação sobre os procedimentos para a entrega.
