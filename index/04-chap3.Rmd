@@ -1,3 +1,12 @@
-# Capítulo 3 {.unnumbered #cap3}
+# CAPÍTULO 3 {.unnumbered #cap3}
 
-blablabla
+```{=tex}
+\begin{center}
+\textbf{Artigo: Metagenomic meta-analysis reveals altered metabolic profiles in Major Depressive Disorder patients}
+\bigskip\newline
+Escrito por: João Vitor Ferreira Cavalcante, Julia Apolonio Amorim, Vasiliki Lagou e Rodrigo Juliani Siqueira Dalmolin
+\bigskip\newline
+\textit{Artigo a ser submetido no periódico Journal of Affective Disorders}
+
+\end{center}
+```

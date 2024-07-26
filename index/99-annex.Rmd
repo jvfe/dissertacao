@@ -22,6 +22,4 @@ maiúsculas dobradas quando esgotadas as letras do alfabeto.
 ```{r ref.label='media-concentracao-urbana', results='hide', echo = TRUE}
 ```
 
-# for Fun
-
 `r if(knitr:::is_latex_output()) '\\eanexos'`

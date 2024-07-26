@@ -46,46 +46,6 @@
 \let\proglang=\textsf
 \let\code=\texttt
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
 \newcommand{\bcenter}{\begin{center}}
 \newcommand{\ecenter}{\end{center}}
@@ -411,9 +371,9 @@ deste trabalho.
 	% ---
 	% inserir lista de quadros
 	% ---
-	\pdfbookmark[0]{\listofquadrosname}{loq}
-	\listofquadros*
-	\cleardoublepage
+	% \pdfbookmark[0]{\listofquadrosname}{loq}
+	% \listofquadros*
+	% \cleardoublepage
 	% ---
 
 	% ---
@@ -477,7 +437,7 @@ as dissertações e teses não serão mais entregues em formato impresso na
 Biblioteca Universitária. Consulte o Repositório Institucional da UFSC ou sua
 Secretaria de Pós Graduação sobre os procedimentos para a entrega.
 
-\chapter{Objetivos}\label{objetivos}
+\chapter{Objetivos}\label{obj}
 
 Nas seções abaixo estão descritos o objetivo geral e os objetivos
 específicos.
@@ -490,106 +450,42 @@ Descrição\ldots{}\gls{Bacen}
 
 Descrição\ldots{}
 
-\chapter*{Capítulo 1}\label{cap1}
-\addcontentsline{toc}{chapter}{Capítulo 1}
+\chapter*{CAPÍTULO 1}\label{cap1}
+\addcontentsline{toc}{chapter}{CAPÍTULO 1}
+\begin{center}
+\textbf{Artigo: Bridging the Gaps in Meta-Omic Analysis: Workflows and Reproducibility}
+\bigskip\newline
+Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
+\bigskip\newline
+\textit{Artigo publicado no periódico OMICS: A Journal of Integrative Biology}
 
-Deve-se inserir texto entre as seções.
+\end{center}
+\begin{fichacatalografica}
+    \includepdf[pages={1-}]{papers/paper1.pdf}
+\end{fichacatalografica}
+\chapter*{CAPÍTULO 2}\label{cap2}
+\addcontentsline{toc}{chapter}{CAPÍTULO 2}
+\begin{center}
+\textbf{Artigo: EURYALE: A versatile Nextflow pipeline for taxonomic classification and functional annotation of metagenomics data}
+\bigskip\newline
+Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
+\bigskip\newline
+\textit{Artigo a ser submetido no periódico BioSystems}
 
-\chapter*{Capítulo 2}\label{cap2}
-\addcontentsline{toc}{chapter}{Capítulo 2}
+\end{center}
+\begin{fichacatalografica}
+    \includepdf[pages={1-}]{papers/paper2.pdf}
+\end{fichacatalografica}
+\chapter*{CAPÍTULO 3}\label{cap3}
+\addcontentsline{toc}{chapter}{CAPÍTULO 3}
+\begin{center}
+\textbf{Artigo: Metagenomic meta-analysis reveals altered metabolic profiles in Major Depressive Disorder patients}
+\bigskip\newline
+Escrito por: João Vitor Ferreira Cavalcante, Julia Apolonio Amorim, Vasiliki Lagou e Rodrigo Juliani Siqueira Dalmolin
+\bigskip\newline
+\textit{Artigo a ser submetido no periódico Journal of Affective Disorders}
 
-Este \emph{template} contém algumas seções criadas na tentativa de facilitar seu uso.
-No entanto, não há um limite máximo ou mínimo de seção a ser utilizado no
-trabalho. Cabe a cada autor definir a quantidade que melhor atenda à sua
-necessidade.
-
-Para criar figuras com o \proglang{R}, pode-se seguir o padrão do código
-abaixo, utilizado para produzir as imagens da figura \ref{fig:anscombe}:
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{data}\NormalTok{(anscombe)}
-\FunctionTok{plot}\NormalTok{(y1}\SpecialCharTok{\textasciitilde{}}\NormalTok{x1, }\AttributeTok{data =}\NormalTok{ anscombe)}
-\FunctionTok{abline}\NormalTok{(}\FunctionTok{lm}\NormalTok{(y1}\SpecialCharTok{\textasciitilde{}}\NormalTok{x1, }\AttributeTok{data =}\NormalTok{ anscombe))}
-\FunctionTok{plot}\NormalTok{(y2}\SpecialCharTok{\textasciitilde{}}\NormalTok{x2, }\AttributeTok{data =}\NormalTok{ anscombe)}
-\FunctionTok{abline}\NormalTok{(}\FunctionTok{lm}\NormalTok{(y2}\SpecialCharTok{\textasciitilde{}}\NormalTok{x2, }\AttributeTok{data =}\NormalTok{ anscombe))}
-\FunctionTok{plot}\NormalTok{(y3}\SpecialCharTok{\textasciitilde{}}\NormalTok{x3, }\AttributeTok{data =}\NormalTok{ anscombe)}
-\FunctionTok{abline}\NormalTok{(}\FunctionTok{lm}\NormalTok{(y3}\SpecialCharTok{\textasciitilde{}}\NormalTok{x3, }\AttributeTok{data =}\NormalTok{ anscombe))}
-\FunctionTok{plot}\NormalTok{(y4}\SpecialCharTok{\textasciitilde{}}\NormalTok{x4, }\AttributeTok{data =}\NormalTok{ anscombe)}
-\FunctionTok{abline}\NormalTok{(}\FunctionTok{lm}\NormalTok{(y4}\SpecialCharTok{\textasciitilde{}}\NormalTok{x4, }\AttributeTok{data =}\NormalTok{ anscombe))}
-\end{Highlighting}
-\end{Shaded}
-\begin{figure}[H]
-
-{\centering \includegraphics[width=0.49\linewidth]{images/anscombe-1} \includegraphics[width=0.49\linewidth]{images/anscombe-2} \includegraphics[width=0.49\linewidth]{images/anscombe-3} \includegraphics[width=0.49\linewidth]{images/anscombe-4} 
-
-}
-
-\caption{O quarteto de Anscombe.}\label{fig:anscombe}
-\end{figure}
-\bcenter
-
-Fonte: do Autor.
-\ecenter
-
-Ou utilizando o pacote \pkg{ggplot2} \autocite*{R-ggplot2}, obtendo-se a figura \ref{fig:anscombe2}.
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(ggplot2)}
-\NormalTok{p1 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(anscombe, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x1, }\AttributeTok{y =}\NormalTok{ y1)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{color =} \StringTok{"darkorange"}\NormalTok{, }\AttributeTok{size =} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{expand\_limits}\NormalTok{(}\AttributeTok{x =} \DecValTok{0}\NormalTok{, }\AttributeTok{y =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"x1"}\NormalTok{, }\AttributeTok{y =} \StringTok{"y1"}\NormalTok{,}
-       \AttributeTok{title =} \StringTok{"Dataset 1"}\NormalTok{ ) }\SpecialCharTok{+}
-  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{, }\AttributeTok{se =} \ConstantTok{FALSE}\NormalTok{)}
-
-\NormalTok{p2 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(anscombe, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x2, }\AttributeTok{y =}\NormalTok{ y2)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{color =} \StringTok{"darkorange"}\NormalTok{, }\AttributeTok{size =} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{expand\_limits}\NormalTok{(}\AttributeTok{x =} \DecValTok{0}\NormalTok{, }\AttributeTok{y =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"x2"}\NormalTok{, }\AttributeTok{y =} \StringTok{"y2"}\NormalTok{,}
-       \AttributeTok{title =} \StringTok{"Dataset 2"}\NormalTok{ ) }\SpecialCharTok{+}
-  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{, }\AttributeTok{se =} \ConstantTok{FALSE}\NormalTok{)}
-
-\NormalTok{p3 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(anscombe, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x3, }\AttributeTok{y =}\NormalTok{ y3)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{color =} \StringTok{"darkorange"}\NormalTok{, }\AttributeTok{size =} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{expand\_limits}\NormalTok{(}\AttributeTok{x =} \DecValTok{0}\NormalTok{, }\AttributeTok{y =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"x3"}\NormalTok{, }\AttributeTok{y =} \StringTok{"y3"}\NormalTok{,}
-       \AttributeTok{title =} \StringTok{"Dataset 3"}\NormalTok{ ) }\SpecialCharTok{+}
-  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{, }\AttributeTok{se =} \ConstantTok{FALSE}\NormalTok{)}
-
-\NormalTok{p4 }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(anscombe, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x4, }\AttributeTok{y =}\NormalTok{ y4)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{color =} \StringTok{"darkorange"}\NormalTok{, }\AttributeTok{size =} \FloatTok{1.5}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{20}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{2}\NormalTok{)) }\SpecialCharTok{+}
-  \FunctionTok{expand\_limits}\NormalTok{(}\AttributeTok{x =} \DecValTok{0}\NormalTok{, }\AttributeTok{y =} \DecValTok{0}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"x4"}\NormalTok{, }\AttributeTok{y =} \StringTok{"y4"}\NormalTok{,}
-       \AttributeTok{title =} \StringTok{"Dataset 4"}\NormalTok{ ) }\SpecialCharTok{+}
-  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method =} \StringTok{"lm"}\NormalTok{, }\AttributeTok{se =} \ConstantTok{FALSE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-\begin{figure}[H]
-
-{\centering \includegraphics[width=1\linewidth]{images/anscombe2-1} 
-
-}
-
-\caption{O Quarteto de Anscombe}\label{fig:anscombe2}
-\end{figure}
-\bcenter
-
-Fonte: do Autor.
-\ecenter
-
-\chapter*{Capítulo 3}\label{cap3}
-\addcontentsline{toc}{chapter}{Capítulo 3}
-
-blablabla
-
+\end{center}
 \chapter{Discussão}\label{disc}
 
 blablabla
@@ -609,72 +505,6 @@ para trabalhos futuros.
 \endgroup
 
 \markboth{Referências}{REFERÊNCIAS}
-
-\bapendices
-
-\chapter{DESCRIÇÃO 1}\label{appendix-a}
-
-Textos elaborados pelo autor, a fim de completar a sua argumentação. Deve ser
-precedido da palavra APÊNDICE, identificada por letras maiúsculas consecutivas,
-travessão e pelo respectivo título. Utilizam-se letras maiúsculas dobradas quando
-esgotadas as letras do alfabeto.
-
-\textbf{No arquivo Rmd principal}
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{cache =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{message=}\ConstantTok{FALSE}\NormalTok{, }
-                      \AttributeTok{warning =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{fig.ext=}\StringTok{\textquotesingle{}png\textquotesingle{}}\NormalTok{, }\AttributeTok{fig.align=}\StringTok{\textquotesingle{}center\textquotesingle{}}\NormalTok{, }
-                      \AttributeTok{fig.path =} \StringTok{"images/"}\NormalTok{, }\AttributeTok{fig.pos =} \StringTok{"H"}\NormalTok{, }\AttributeTok{dev =} \StringTok{"png"}\NormalTok{, }
-                      \AttributeTok{dpi =} \DecValTok{600}\NormalTok{, }\AttributeTok{out.width =} \StringTok{"70\%"}\NormalTok{)}
-\NormalTok{type }\OtherTok{\textless{}{-}}\NormalTok{ knitr}\SpecialCharTok{::}\NormalTok{opts\_knit}\SpecialCharTok{$}\FunctionTok{get}\NormalTok{(}\StringTok{"rmarkdown.pandoc.to"}\NormalTok{)}
-\CommentTok{\# This chunk ensures that the ufscdown package is}
-\CommentTok{\# installed and loaded. This ufscdown package includes}
-\CommentTok{\# the template files for the thesis.}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(remotes))}
-  \FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(ufscdown))}
-\NormalTok{  remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"lfpdroubi/ufscdown"}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(ufscdown)}
-\end{Highlighting}
-\end{Shaded}
-\textbf{No Capítulo \ref{desenvolvimento}:}
-
-\chapter{FOR FUN}\label{appendix-b}
-
-\eapendices
-
-\banexos
-
-\chapter{DESCRIÇÃO 1}\label{descriuxe7uxe3o-1}
-
-São documentos não elaborados pelo autor que servem como fundamentação (mapas,
-leis, estatutos). Deve ser precedido da palavra ANEXO, identificada por letras
-maiúsculas consecutivas, travessão e pelo respectivo título. Utilizam-se letras
-maiúsculas dobradas quando esgotadas as letras do alfabeto.
-
-\textbf{No arquivo Rmd principal}
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{cache =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{message=}\ConstantTok{FALSE}\NormalTok{, }
-                      \AttributeTok{warning =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{fig.ext=}\StringTok{\textquotesingle{}png\textquotesingle{}}\NormalTok{, }\AttributeTok{fig.align=}\StringTok{\textquotesingle{}center\textquotesingle{}}\NormalTok{, }
-                      \AttributeTok{fig.path =} \StringTok{"images/"}\NormalTok{, }\AttributeTok{fig.pos =} \StringTok{"H"}\NormalTok{, }\AttributeTok{dev =} \StringTok{"png"}\NormalTok{, }
-                      \AttributeTok{dpi =} \DecValTok{600}\NormalTok{, }\AttributeTok{out.width =} \StringTok{"70\%"}\NormalTok{)}
-\NormalTok{type }\OtherTok{\textless{}{-}}\NormalTok{ knitr}\SpecialCharTok{::}\NormalTok{opts\_knit}\SpecialCharTok{$}\FunctionTok{get}\NormalTok{(}\StringTok{"rmarkdown.pandoc.to"}\NormalTok{)}
-\CommentTok{\# This chunk ensures that the ufscdown package is}
-\CommentTok{\# installed and loaded. This ufscdown package includes}
-\CommentTok{\# the template files for the thesis.}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(remotes))}
-  \FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{, }\AttributeTok{repos =} \StringTok{"http://cran.rstudio.com"}\NormalTok{)}
-\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(ufscdown))}
-\NormalTok{  remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"lfpdroubi/ufscdown"}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(ufscdown)}
-\end{Highlighting}
-\end{Shaded}
-\textbf{No Capítulo \ref{ref-labels}:}
-
-\chapter{for Fun}\label{for-fun}
-
-\eanexos
 
 % ----------------------------------------------------------
 % Glossário

@@ -1,84 +1,19 @@
-# Capítulo 2 {.unnumbered #cap2}
+# CAPÍTULO 2 {#cap2 .unnumbered}
 
-Este *template* contém algumas seções criadas na tentativa de facilitar seu uso.
-No entanto, não há um limite máximo ou mínimo de seção a ser utilizado no 
-trabalho. Cabe a cada autor definir a quantidade que melhor atenda à sua 
-necessidade.  
+```{=tex}
+\begin{center}
+\textbf{Artigo: EURYALE: A versatile Nextflow pipeline for taxonomic classification and functional annotation of metagenomics data}
+\bigskip\newline
+Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
+\bigskip\newline
+\textit{Artigo a ser submetido no periódico BioSystems}
 
-Para criar figuras com o \proglang{R}, pode-se seguir o padrão do código
-abaixo, utilizado para produzir as imagens da figura \@ref(fig:anscombe):
-
-```{r anscombe, fig.cap = "O quarteto de Anscombe.", out.width = "49%", fig.show='hold', echo = TRUE}
-data(anscombe)
-plot(y1~x1, data = anscombe)
-abline(lm(y1~x1, data = anscombe))
-plot(y2~x2, data = anscombe)
-abline(lm(y2~x2, data = anscombe))
-plot(y3~x3, data = anscombe)
-abline(lm(y3~x3, data = anscombe))
-plot(y4~x4, data = anscombe)
-abline(lm(y4~x4, data = anscombe))
-``` 
-\bcenter
-Fonte: do Autor.
-\ecenter
-
-```{r install-ggplot2}
-if(!require(ggplot2))
-  install.packages("ggplot2", repos = "http://cran.rstudio.com")
-```
-
-Ou utilizando o pacote \pkg{ggplot2} [-@R-ggplot2], obtendo-se a figura \@ref(fig:anscombe2).
-
-```{r ggplots, echo = TRUE}
-library(ggplot2)
-p1 <- ggplot(anscombe, aes(x = x1, y = y1)) +
-  geom_point(color = "darkorange", size = 1.5) +
-  scale_x_continuous(breaks = seq(0,20,2)) +
-  scale_y_continuous(breaks = seq(0,12,2)) +
-  expand_limits(x = 0, y = 0) +
-  labs(x = "x1", y = "y1",
-       title = "Dataset 1" ) +
-  geom_smooth(method = "lm", se = FALSE)
-
-p2 <- ggplot(anscombe, aes(x = x2, y = y2)) +
-  geom_point(color = "darkorange", size = 1.5) +
-  scale_x_continuous(breaks = seq(0,20,2)) +
-  scale_y_continuous(breaks = seq(0,12,2)) +
-  expand_limits(x = 0, y = 0) +
-  labs(x = "x2", y = "y2",
-       title = "Dataset 2" ) +
-  geom_smooth(method = "lm", se = FALSE)
-
-p3 <- ggplot(anscombe, aes(x = x3, y = y3)) +
-  geom_point(color = "darkorange", size = 1.5) +
-  scale_x_continuous(breaks = seq(0,20,2)) +
-  scale_y_continuous(breaks = seq(0,12,2)) +
-  expand_limits(x = 0, y = 0) +
-  labs(x = "x3", y = "y3",
-       title = "Dataset 3" ) +
-  geom_smooth(method = "lm", se = FALSE)
-
-p4 <- ggplot(anscombe, aes(x = x4, y = y4)) +
-  geom_point(color = "darkorange", size = 1.5) +
-  scale_x_continuous(breaks = seq(0,20,2)) +
-  scale_y_continuous(breaks = seq(0,12,2)) +
-  expand_limits(x = 0, y = 0) +
-  labs(x = "x4", y = "y4",
-       title = "Dataset 4" ) +
-  geom_smooth(method = "lm", se = FALSE)
+\end{center}
 ```
 
 
-
-```{r anscombe2, fig.cap = "O Quarteto de Anscombe", out.width="100%"}
-if(!require(cowplot))
-  install.packages("cowplot", repos = "http://cran.rstudio.com")
-library(cowplot)
-theme_set(theme_cowplot(12))
-plot_grid(p1, p2, p3, p4, align = "v", ncol = 2, 
-             labels = list("A", "B", "C", "D"))
+```{=tex}
+\begin{fichacatalografica}
+    \includepdf[pages={1-}]{papers/paper2.pdf}
+\end{fichacatalografica}
 ```
-\bcenter
-Fonte: do Autor.
-\ecenter
