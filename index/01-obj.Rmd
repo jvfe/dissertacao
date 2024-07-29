@@ -8,14 +8,15 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 # Objetivos {#obj}
 
-Nas seções abaixo estão descritos o objetivo geral e os objetivos 
-específicos.
-
 ## Geral
 
-Descrição...\gls{Bacen}
-
+Obter uma visão geral do ecossistema computacional em metagenômica atual e como ele se associa
+com princípios de desenvolvimento de software científico, desenvolvendo então uma metodologia
+para dados de \{MS} que possibilite uma análisa metagenômica compreensiva. 
+Por fim, se baseando em parte nessa nova metodologia, analisar dados da microbiota intestinal de pacientes com \gls{TDM} e trazer novas descobertas acerca da relação da enfermidade com aspectos metabólicos da microbiota.
 
 ## Específicos
 
-Descrição...
+- Avaliar o atual ferramentário computacional para dados de metagenômica e sua adesão a princípios de desenvolvimento de software sustentável.
+- Desenvolver uma metodologia robusta, flexível e acessível para análise de dados de \gls{MS}.
+- Realizar uma meta-análise da microbiota intestinal de pacientes com \gls{TDM}, focando em aspectos metabólicos e funcionais.
