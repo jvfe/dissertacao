@@ -1,7 +1,7 @@
 ---
 author: 'JOÃO VITOR FERREIRA CAVALCANTE'
 local: NATAL - RN
-date_year: '2024'
+date_year: '2025'
 date_month: 'Setembro'
 date_day: '31'
 institution: 'Universidade Federal do Rio Grande do Norte'
@@ -68,26 +68,9 @@ thanks: |
   | deste trabalho.
 # If you prefer blank lines between paragraphs, un-silence lines  74-75 (this 
 # requires package tikz)
-#header-includes:
-#- \usepackage{tikz}
+header-includes:
+- \usepackage{tikz}
 ---
-
-<!--
-Above is the YAML (YAML Ain't Markup Language) header that includes a lot of 
-metadata used to produce the document.  Be careful with spacing in this header!
-
-If you'd prefer to not include a Dedication, for example, simply delete the 
-section entirely, or silence (add #) them. 
-
-If you have other LaTeX packages you would like to include, delete the # 
-before header-includes and list the packages after hyphens on new lines.
-
-If you'd like to include a comment that won't be produced in your resulting file 
-enclose it in a block like this.
-
-If you receive a duplicate label error after knitting, make sure to delete the 
-index.Rmd file and then knit again.
--->
 
 ```{r include_packages, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE, cache = FALSE, message=FALSE, 
@@ -105,42 +88,18 @@ if(!require(ufscdown))
 library(ufscdown)
 ```
 
-<!-- On ordering the chapter files:
-There are two options:
-1. Name your chapter files in the order in which you want them to appear (e.g., 
-01-Intro, 02-Data, 03-Conclusions). 
-2. Otherwise, you can specify the order in which they appear in the 
-_bookdown.yml (for PDF only).
-
-Do not include 00(two-hyphens)prelim.Rmd and 00-abstract.Rmd in the YAML file--
-they are handled in the YAML above differently for the PDF version.
--->
-
-<!-- The {.unnumbered} option here means that the introduction will be 
-"Chapter 0." You can also use {-} for no numbers
-on chapters.
--->
 # Introdução {#intro}
 
+## Visão Geral - Metagenômica
 
-As orientações aqui apresentadas são baseadas em um conjunto de normas
-elaboradas pela \gls{ABNT}. Além das normas técnicas, a Biblioteca também
-elaborou uma série de tutoriais, guias, *templates* os quais estão disponíveis 
-em seu site, no endereço \url{http://portal.bu.ufsc.br/normalizacao/}.
+A história da vida microscópica, ou microbiana, no planeta Terra supera a história da vida macroscópica por milhares de anos (**ref**). A metagenômica surge como uma abordagem que possibilita descobertas acerca da vida microbiana através do sequenciamento genético. Avanços no que viria eventualmente a se tornar a metagenômica surgem ainda nos anos 90, com o primeiro sequenciamento de genoma completo de um organismo de vida livre, a bactéria *Haemophilus influenza* [@wooley2010]. Esse ponto na história científica marca o primeiro uso bem sucedido do que vem a ser chamado de *whole-genome shotgun*, ou sequenciamento de genoma completo, no qual a amostra possui seu conteúdo genético fragmentado em *reads*, ou leituras, que são então sequenciadas. Essa técnica viria a ser refinada e aplicada para amostras ambientais, seja este ambiente uma amostra de solo florestal ou uma biópsia intestinal. Nessa nova técnica se buscou sequenciar o conteúdo genético que compreenda os diferentes microorganismos presentes em tais amostras, originando assim o que será aqui descrito como \gls{MS}.
 
-Paralelamente ao uso deste *template* recomenda-se que seja utilizado o
-**Tutorial de Trabalhos Acadêmicos** (disponível neste 
-[link](\url{https://repositorio.ufsc.br/handle/123456789/180829)) e/ou que o 
-discente **participe das capacitações oferecidas da Biblioteca Universitária da 
-UFSC**.
+No entanto, o estudo de comunidades microbianas se populariza de fato com uma técnica que não busca capturar o conteúdo genético total de uma amostra, mas apenas uma subregião de seu \gls{DNA} ribossomal que possua ao mesmo tempo regiões conservadas, capaz de serem passíveis de anelamento por *primers*, e regiões hipervariáveis, capazes de distinguir um microorganismo de outro. Em bactérias o ribotipo selecionado foi o \gls{DNA} que codifica a subunidade 16S, que é amplificada e então sequenciada. O \gls{16S}, também denominado metataxonômica [@marchesi2015], possibilitou uma maneira simples, e pouco computacionalmente intensiva quando comparada à \gls{MS} (**ref**), para realizar identificação de táxons bacterianos em uma amostra ambiental. Ademais, técnicas computacionais posteriores ultimamente facilitariam a conexão de informação funcional às abundâncias taxonômicas obtidas através desta técnica.
 
-Este *template* está configurado apenas para a impressão utilizando o
-anverso das folhas, caso você queira imprimir usando a frente e o verso,
-acrescente a opção *openright* e mude de *oneside* para
-*twoside* nas configurações da classe *abntex2* no início do
-arquivo principal *main.tex* [@abntex2classe].
+Dessa maneira, possuímos atualmente, duas possíveis abordagens para se estudar comunidades microbianas, a \gls{MS} e o \gls{16S}. Essas abordagens, por se basearem de aspectos distintos do microbioma, tipicamente são utilizadas de forma separada - e não integrativa - por estudos. Apesar disso, a integração de dados provenientes das duas abordagens pode auxiliar a remover vieses experimentais específicos de cada técnica, e, dessa maneira, conferir maior confiabilidade aos resultados [@yue2023].
 
-Conforme a [Resolução NORMATIVA nº 46/2019/CPG](https://repositorio.ufsc.br/bitstream/handle/123456789/197121/RN46.2019.pdf?sequence=1&isAllowed=y)
-as dissertações e teses não serão mais entregues em formato impresso na 
-Biblioteca Universitária. Consulte o Repositório Institucional da UFSC ou sua 
-Secretaria de Pós Graduação sobre os procedimentos para a entrega.
+## O Ecossistema computacional em Metagenômica
+
+## Visão Geral - Transtorno Depressivo Maior
+
+## O Eixo Microbiota-Cérebro e o TDM
