@@ -6,7 +6,7 @@
 \bigskip\newline
 Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
 \bigskip\newline
-\textit{Artigo a ser submetido no periódico BioSystems}
+\textit{Artigo submetido no periódico IEEE Access}
 
 \end{center}
 ```
