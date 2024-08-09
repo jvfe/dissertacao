@@ -12,7 +12,7 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
 
 Obter uma visão geral do ecossistema computacional em metagenômica atual e como ele se associa
 com princípios de desenvolvimento de software científico, desenvolvendo então uma metodologia
-para dados de \{MS} que possibilite uma análisa metagenômica compreensiva. 
+para dados de \gls{MS} que possibilite uma análisa metagenômica compreensiva.
 Por fim, se baseando em parte nessa nova metodologia, analisar dados da microbiota intestinal de pacientes com \gls{TDM} e trazer novas descobertas acerca da relação da enfermidade com aspectos metabólicos da microbiota.
 
 ## Específicos

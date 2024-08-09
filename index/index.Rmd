@@ -62,10 +62,11 @@ epigrafe: |
 bibliography: ["bib/thesis.bib", "bib/references.bib", "bib/pkgs.bib"]
 link-citations: yes
 dedication: |
-  Este trabalho é dedicado a algumas pessoas.
+  Non ut sit repellendus ea sunt dolor.
 thanks: |
-  | Gostaria de agradecer sinceramente a todos os que colaboraram à execução 
-  | deste trabalho.
+  | Nihil ipsum velit cupiditate. Facilis inventore eveniet illo et.
+  | Fugit unde cumque necessitatibus repudiandae non.
+  | Voluptatem hic a numquam enim aperiam voluptatem. 
 # If you prefer blank lines between paragraphs, un-silence lines  74-75 (this 
 # requires package tikz)
 header-includes:
@@ -99,6 +100,14 @@ No entanto, o estudo de comunidades microbianas se populariza de fato com uma t�
 Dessa maneira, possuímos atualmente, duas possíveis abordagens para se estudar comunidades microbianas, a \gls{MS} e o \gls{16S}. Essas abordagens, por se basearem de aspectos distintos do microbioma, tipicamente são utilizadas de forma separada - e não integrativa - por estudos. Apesar disso, a integração de dados provenientes das duas abordagens pode auxiliar a remover vieses experimentais específicos de cada técnica, e, dessa maneira, conferir maior confiabilidade aos resultados [@yue2023].
 
 ## O Ecossistema computacional em Metagenômica
+
+As metodologias de processamento de dados \gls{16S} em grande parte já estão estabelecidas, dada a idade mais avançada da abordagem. Nesse sentido, vemos que o cerne das abordagens trata de atribuir identificadores únicos às sequências 16S obtidas, caracterizando assim táxons distintos. Esses identificadores podem ser atribuídos através de métodos de agrupamento, caracterizando as abordagens baseadas em \gls{OTU}, que agrupam sequências com pelo menos 97% de identidade em grupos biológicos distintos, ou abordagens baseadas em \gls{ASV}, que, através de modelos estatísticos, tentam definir variações biológicas reais na sequência - contrastadas com variações devido a erros de sequenciamento, e dessa maneira obter uma resolução taxonômica maior comparada às baseadas em \gls{OTU} [@chiarello2022]. Nesse contexto, observamos metodologias que buscam, a partir dos \gls{OTU} ou \gls{ASV} identificados, inferir abundâncias de vias metabólicas específicas, tirando proveito de bancos de dados de informação curada a respeito desses táxons que possua mapeamento das famílias gênicas de seu genoma a funções biológicas [@douglas2020].
+
+Por outro lado, o campo do desenvolvimento de metodologias para dados de \gls{MS} ainda é bastante fértil, com novas técnicas computacionais desenvolvidas rotineiramente [@liu2021]. De forma geral, podemos agrupar as metodologias em duas grandes categorias: Metodologias livres de montagem, isto é, aquelas que se utilizam apenas da informação contidas nas leituras para obter seus resultados, e metodologias baseadas em montagem, que primeiro realizam a montagem de leituras em sequências contíguas (ou \textit{contigs}), que fornecerá então a base para o processamento seguinte [@breitwieser2019]. Apesar da capacidade que métodos baseados em montagem tem de descobrir novos organismos e montar genomas inéditos, métodos livres de montagem apresentam certas vantagens, sobretudo quando consideramos dados com baixa cobertura de sequência, o que pode resultar em montagens pouco precisas [@ayling2020].
+
+No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag [@krakau2022] e metaphor [@salazar2023]. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou *pipelines*, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow [@ditommaso2017] ou Snakemake [@mölder2021], e que adiram a boas práticas de desenvolvimento de *software* científico, como isolamento de dependências, instalação fácil e documentação descritiva, com exemplos [@mangul2019]. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA [@morais2022], que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
+
+Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software e que tenha como princípios norteadores a reprodutibilidade, documentação expansiva e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
 
 ## Visão Geral - Transtorno Depressivo Maior
 
