@@ -5,7 +5,6 @@ rmd_files:
   - "01-obj.Rmd"
   - "02-chap1.Rmd"
   - "03-chap2.Rmd"
-  - "04-chap3.Rmd"
   - "05-discussao.Rmd"
   - "96-conclusion.Rmd"
   - "97-references.Rmd"

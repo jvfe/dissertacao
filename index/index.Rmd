@@ -108,7 +108,3 @@ Por outro lado, o campo do desenvolvimento de metodologias para dados de \gls{MS
 No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag [@krakau2022] e metaphor [@salazar2023]. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou *pipelines*, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow [@ditommaso2017] ou Snakemake [@mölder2021], e que adiram a boas práticas de desenvolvimento de *software* científico, como isolamento de dependências, instalação fácil e documentação descritiva, com exemplos [@mangul2019]. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA [@morais2022], que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
 
 Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software e que tenha como princípios norteadores a reprodutibilidade, documentação expansiva e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
-
-## Visão Geral - Transtorno Depressivo Maior
-
-## O Eixo Microbiota-Cérebro e o TDM
