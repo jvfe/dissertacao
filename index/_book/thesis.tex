@@ -33,7 +33,7 @@
 \usepackage{setup/ufrnthesisA4-alf}
 
 \addbibresource{bib/thesis.bib}
-\addbibresource{bib/references.bib}
+\addbibresource{bib/discussion.bib}
 \addbibresource{bib/pkgs.bib}
 
 \usepackage[table]{xcolor}
@@ -99,10 +99,10 @@
 % FIXME Substituir 'Nome completo do autor' pelo seu nome.
 \autor{JOÃO VITOR FERREIRA CAVALCANTE}
 % FIXME Substituir 'Título do trabalho' pelo título da trabalho.
-\titulo{TÍTULO DE METAGENÔMICA}
+\titulo{O Ecossistema Computacional da Metagenômica}
 % FIXME Substituir 'Subtítulo (se houver)' pelo subtítulo da trabalho.
 % Caso não tenha substítulo, comente a linha a seguir.
-  \subtitulo{SUBTÍTULO}
+  \subtitulo{Fluxos de Trabalho, Reprodutibilidade e Replicabilidade}
 % FIXME Substituir 'XXXXXX' pelo nome do seu
 % orientador.
 \orientador{Rodrigo Juliani Siqueira Dalmolin}
@@ -254,11 +254,14 @@
 	Natal, \imprimirdata.
 	\end{flushright}
 	\vspace*{\baselineskip}
-  %   % Prof. Examinador 1, Dr.\\
+  %   % Prof. Renan Cipriano Moioli, Dr.\\
   % Universidade Federal do Rio Grande do Norte - UFRN\\
   % \vspace*{\baselineskip}
-  %   % Prof. Examinador 2, Dr.\\
-  % Universidade Federal dos Externos - UFE\\
+  %   % Prof. Daniel Carlos Ferreira Lanza, Dr.\\
+  % Universidade Federal do Rio Grande do Norte - UFRN\\
+  % \vspace*{\baselineskip}
+  %   % Prof. Marcel da Câmara Ribeiro-Dantas, Dr.\\
+  % Universidade Potiguar - UNP\\
   % \vspace*{\baselineskip}
   % 
 	\vspace*{2\baselineskip}
@@ -268,8 +271,9 @@
 	%    \vspace{-0.7cm}
 	\centering{\textbf{BANCA EXAMINADORA}}
 	\assinatura{\OnehalfSpacing Prof. Dr. \imprimirorientador \\ \footnotesize{\imprimirinstituicao \\ (Presidente)}}
-    \assinatura{Prof. Dr. Examinador 1 \\ \footnotesize{Universidade Federal do Rio Grande do Norte \\ (Examinador Interno do Programa)}}
-    \assinatura{Prof. Dr. Examinador 2 \\ \footnotesize{Universidade Federal dos Externos \\ (Examinador Externo à Instituição)}}
+    \assinatura{Prof. Dr. Renan Cipriano Moioli \\ \footnotesize{Universidade Federal do Rio Grande do Norte \\ (Examinador Interno do Programa)}}
+    \assinatura{Prof. Dr. Daniel Carlos Ferreira Lanza \\ \footnotesize{Universidade Federal do Rio Grande do Norte \\ (Examinador Interno do Programa)}}
+    \assinatura{Prof. Dr. Marcel da Câmara Ribeiro-Dantas \\ \footnotesize{Universidade Potiguar \\ (Examinador Externo à Instituição)}}
   	%	\ifnotempty{\imprimircoorientador}{
 	%	\assinatura{\imprimircoorientador \\ \imprimircoorientadorRotulo \\
 	%		\imprimirinstituicao~--~\imprimirinstituicaosigla}
@@ -434,14 +438,25 @@ No que se diz respeito a essas metodologias, vemos que as baseadas em montagem s
 
 Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software e que tenha como princípios norteadores a reprodutibilidade, documentação expansiva e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
 
+\section{Desenvolvimento de Software em Bioinformática}\label{desenvolvimento-de-software-em-bioinformuxe1tica}
+\begin{itemize}
+\tightlist
+\item
+  Princípios
+\item
+  Pipelines
+\item
+  Conteinerização
+\item
+  Reprodutibilidade e replicabilidade
+\end{itemize}
 \chapter{Objetivos}\label{obj}
 
 \section{Geral}\label{geral}
 
 Obter uma visão geral do ecossistema computacional em metagenômica atual e como ele se associa
 com princípios de desenvolvimento de software científico, desenvolvendo então uma metodologia
-para dados de \gls{MS} que possibilite uma análisa metagenômica compreensiva.
-Por fim, se baseando em parte nessa nova metodologia, analisar dados da microbiota intestinal de pacientes com \gls{TDM} e trazer novas descobertas acerca da relação da enfermidade com aspectos metabólicos da microbiota.
+para dados de \gls{MS} que possibilite uma análisa metagenômica compreensiva, de forma reprodutível e flexível.
 
 \section{Específicos}\label{especuxedficos}
 \begin{itemize}
@@ -450,8 +465,6 @@ Por fim, se baseando em parte nessa nova metodologia, analisar dados da microbio
   Avaliar o atual ferramentário computacional para dados de metagenômica e sua adesão a princípios de desenvolvimento de software sustentável.
 \item
   Desenvolver uma metodologia robusta, flexível e acessível para análise de dados de \gls{MS}.
-\item
-  Realizar uma meta-análise da microbiota intestinal de pacientes com \gls{TDM}, focando em aspectos metabólicos e funcionais.
 \end{itemize}
 \chapter*{CAPÍTULO 1}\label{cap1}
 \addcontentsline{toc}{chapter}{CAPÍTULO 1}
@@ -473,31 +486,34 @@ Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur
 \bigskip\newline
 Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
 \bigskip\newline
-\textit{Artigo submetido no periódico IEEE Access}
+\textit{Artigo submetido ao periódico IEEE Access}
 
 \end{center}
 \begin{fichacatalografica}
     \includepdf[pages={1-}]{papers/paper2.pdf}
 \end{fichacatalografica}
-\chapter*{CAPÍTULO 3}\label{cap3}
-\addcontentsline{toc}{chapter}{CAPÍTULO 3}
-\begin{center}
-\textbf{Artigo: Metagenomic meta-analysis reveals altered metabolic profiles in Major Depressive Disorder patients}
-\bigskip\newline
-Escrito por: João Vitor Ferreira Cavalcante, Julia Apolonio Amorim, Vasiliki Lagou e Rodrigo Juliani Siqueira Dalmolin
-\bigskip\newline
-\textit{Artigo a ser submetido no periódico Journal of Affective Disorders}
-
-\end{center}
 \chapter{Discussão}\label{disc}
 
-blablabla
+Ao averiguarmos o estado da arte dos fluxos de trabalho computacional presentes na área da metagenômica, pudemos concluir que a adoção de tecnologias de conteinerização e orquestradores de execução ainda é um tanto limitada.
+Essas limitações tornam-se mais evidentes sobretudo no contexto de metodologias de metagenômica livres de montagem.
+Tais metodologias são mais escassas e menos computacionalmente intensas quando comparadas às abordagens baseadas em montagem.
+Ainda assim, elas necessitam processamento adequado, de forma reprodutível, replicável e automatizável, especialmente por possibilitarem uma análise realizável em infraestruturas de menor porte e por possuírem melhor sensibilidade ao tratar dados com baixa cobertura \autocite{ayling2020}, ambos fatores comuns quando se tratando da produção e processamento de dados metagenômicos em ambientes com financiamento científico limitado, como no sul global.
+
+No contexto de possíveis metodologias, decidimos então aplicar os princípios postos para a metodologia MEDUSA \autocite{morais2022}, que apresentou resultados superiores a fluxos de trabalho semelhantes, além de ter obtido suas ferramentas a partir de curadoria manual, com rigorosos processos de \emph{benchmarking}.
+Portanto, tomando vantagem da curadoria precedente, decidimos então re-implementar o MEDUSA, utilizando-se agora do gerenciador de pipelines \emph{Nextflow} a de tecnologias de contêinerização: \emph{Docker} e \emph{Singularity. \textbf{A escolha do gerenciador\ldots{} Porquê conteinerização\ldots{}}}
+
+\textbf{No entanto, acessibilidade ao usuário\ldots{} resultados de interpretabilidade complexa\ldots{} Detalhes sobre o MultiQC\ldots{} Microview e detalhes de sua implementação\ldots{} Figura ilustrativa do report microview\ldots{} Falar sobre como funciona isoladamente\ldots{}}
+
+\textbf{Falar sobre nf-core\ldots{} alto grau de parametrização\ldots{} entry de download\ldots{}}
 
 \chapter{Conclusão}\label{conclusuxe3o}
 
-As conclusões devem responder às questões da pesquisa, em relação aos objetivos
-e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões
-para trabalhos futuros.
+Ressaltar como avançamos nas metodologias de meta com orquestração e conteinerização,
+priorizando princípios de software sustentável. Na mesma medida, nos baseamos em uma metodologia
+sólida já existente, aprimorando nesses conceitos além de possibilitar melhor interpretabilidade
+com a implementação de uma ferramenta adicional de reporting.
+No entanto, faltar como metodologias de integração de dados metagenomica/metatranscriptomica ainda
+são relativamente escassas, sobretudo considerando-se fluxos de trabalho automatizados e que sigam esses mesmos princípios.
 
 \postextual
 

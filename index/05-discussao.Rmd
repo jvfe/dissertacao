@@ -1,3 +1,13 @@
 # Discussão {#disc}
 
-blablabla
+Ao averiguarmos o estado da arte dos fluxos de trabalho computacional presentes na área da metagenômica, pudemos concluir que a adoção de tecnologias de conteinerização e orquestradores de execução ainda é um tanto limitada.
+Essas limitações tornam-se mais evidentes sobretudo no contexto de metodologias de metagenômica livres de montagem.
+Tais metodologias são mais escassas e menos computacionalmente intensas quando comparadas às abordagens baseadas em montagem.
+Ainda assim, elas necessitam processamento adequado, de forma reprodutível, replicável e automatizável, especialmente por possibilitarem uma análise realizável em infraestruturas de menor porte e por possuírem melhor sensibilidade ao tratar dados com baixa cobertura [@ayling2020], ambos fatores comuns quando se tratando da produção e processamento de dados metagenômicos em ambientes com financiamento científico limitado, como no sul global.
+
+No contexto de possíveis metodologias, decidimos então aplicar os princípios postos para a metodologia MEDUSA [@morais2022], que apresentou resultados superiores a fluxos de trabalho semelhantes, além de ter obtido suas ferramentas a partir de curadoria manual, com rigorosos processos de *benchmarking*.
+Portanto, tomando vantagem da curadoria precedente, decidimos então re-implementar o MEDUSA, utilizando-se agora do gerenciador de pipelines *Nextflow* a de tecnologias de contêinerização: *Docker* e *Singularity. **A escolha do gerenciador... Porquê conteinerização...***
+
+**No entanto, acessibilidade ao usuário... resultados de interpretabilidade complexa... Detalhes sobre o MultiQC... Microview e detalhes de sua implementação... Figura ilustrativa do report microview... Falar sobre como funciona isoladamente...**
+
+**Falar sobre nf-core... alto grau de parametrização... entry de download...**

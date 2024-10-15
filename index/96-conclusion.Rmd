@@ -1,6 +1,13 @@
 # Conclusão
 
-As conclusões devem responder às questões da pesquisa, em relação aos objetivos 
-e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões 
-para trabalhos futuros.
+Ressaltar como avançamos nas metodologias de meta com orquestração e conteinerização,
+priorizando princípios de software sustentável. Na mesma medida, nos baseamos em uma metodologia
+sólida já existente, aprimorando nesses conceitos além de possibilitar melhor interpretabilidade
+com a implementação de uma ferramenta adicional de reporting.
+No entanto, faltar como metodologias de integração de dados metagenomica/metatranscriptomica ainda
+são relativamente escassas, sobretudo considerando-se fluxos de trabalho automatizados e que sigam esses mesmos princípios.
+
+<!-- As conclusões devem responder às questões da pesquisa, em relação aos objetivos  -->
+<!-- e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões  -->
+<!-- para trabalhos futuros. -->
 
