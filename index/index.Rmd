@@ -1,9 +1,9 @@
 ---
 author: 'JOÃO VITOR FERREIRA CAVALCANTE'
 local: NATAL - RN
-date_year: '2025'
-date_month: 'Setembro'
-date_day: '31'
+date_year: '2024'
+date_month: 'Dezembro'
+date_day: '06'
 institution: 'Universidade Federal do Rio Grande do Norte'
 inst_short: 'UFRN'
 division: 'Instituto Metrópole Digital'
