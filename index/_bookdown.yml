@@ -1,5 +1,5 @@
 book_filename: "thesis"
-chapter_name: "Chapter "
+chapter_name: "Capítulo "
 rmd_files:
   - "index.Rmd"
   - "01-obj.Rmd"
