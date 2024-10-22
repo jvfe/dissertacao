@@ -35,7 +35,7 @@ department: |
 degree: 'Mestre em Bioinformática'
 level: 'mestrado'
 doc_type: 'Defesa de Mestrado'
-title: 'EURYALE e o Ecossistema Computacional da Metagenômica'
+title: 'O Ecossistema Computacional da Metagenômica'
 subtitle: 'Fluxos de Trabalho e Reprodutibilidade'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
