@@ -32,7 +32,9 @@
 
 \usepackage{setup/ufrnthesisA4-alf}
 
+\addbibresource{bib/thesis.bib}
 \addbibresource{bib/discussion.bib}
+\addbibresource{bib/pkgs.bib}
 
 \usepackage[table]{xcolor}
 \let\newfloat\undefined
@@ -97,10 +99,10 @@
 % FIXME Substituir 'Nome completo do autor' pelo seu nome.
 \autor{JOÃO VITOR FERREIRA CAVALCANTE}
 % FIXME Substituir 'Título do trabalho' pelo título da trabalho.
-\titulo{O Ecossistema Computacional da Metagenômica}
+\titulo{EURYALE e o Ecossistema Computacional da Metagenômica}
 % FIXME Substituir 'Subtítulo (se houver)' pelo subtítulo da trabalho.
 % Caso não tenha substítulo, comente a linha a seguir.
-  \subtitulo{Fluxos de Trabalho, Reprodutibilidade e Replicabilidade}
+  \subtitulo{Fluxos de Trabalho e Reprodutibilidade}
 % FIXME Substituir 'XXXXXX' pelo nome do seu
 % orientador.
 \orientador{Rodrigo Juliani Siqueira Dalmolin}
@@ -426,28 +428,24 @@ No entanto, o estudo de comunidades microbianas se populariza de fato com uma t�
 
 Dessa maneira, possuímos atualmente, duas possíveis abordagens para se estudar comunidades microbianas, a \gls{MS} e o \gls{16S}. Essas abordagens, por se basearem de aspectos distintos do microbioma, tipicamente são utilizadas de forma separada - e não integrativa - por estudos. Apesar disso, a integração de dados provenientes das duas abordagens pode auxiliar a remover vieses experimentais específicos de cada técnica, e, dessa maneira, conferir maior confiabilidade aos resultados \autocite{yue2023}.
 
+\section{Desenvolvimento de Software Científico}\label{desenvolvimento-de-software-cientuxedfico}
+
+Metodologias computacionais constituem parte indissociável da biologia molecular moderna, com novas ferramentas, abordagens e fluxos de trabalho, isto é, metodologias que agregam diversas ferramentas em sequência, surgindo a cada momento. Nesse contexto, muito tem se discutido acerca da qualidade do software desenvolvido, não apenas do ponto de vista de qualidade científica ou estatística da análise a ser realizada, mas também qualidade a partir de um ponto de vista técnico.
+
+Tipicamente software é tratado como um ponto adjacente à uma análise científica, e não seu principal produto. Parcialmente isto se dá devido ao modelo de desenvolvimento de software científico atualmente vigente, que se dá por meio de projetos de doutorado e mestrado, dificultando, dessa maneira, manutenção a longo prazo \autocite{altschul2013} \autocite{mangul2019a}. Portanto, produzir metodologias que sejam usáveis a longo prazo sem necessitarem de alta manutenção é essencial. Nesse sentido, a utilização de tecnologias que facilitem a instalação de software, como gerenciadores de ambiente, ou tecnologias capazes de encapsular um ambiente computacional, como contêineres, são indispensáveis para a garantia de reprodutibilidade de qualquer método computacional, por garantirem o isolamento das dependências de um \emph{software} indefinidamente \autocite{kadri2022}.
+
+No entanto, garantir a capacidade de instalação do software é um ponto basal para determinar a qualidade de código científico. Outros princípios, aqui denominados como boas práticas de desenvolvimento de software científicos, são igualmente indispensáveis para que uma metodologia seja utilizável a longo prazo, além de capaz de gerar resultados científicos interpretáveis e consistentes. Além da instalabilidade, alguns outros princípios que garantem a qualidade de um software a longo prazo são uma documentação descritiva, com exemplos práticos de utilização, suporte multi-plataforma \autocite{mangul2019} e, para softwares de processamento de dados, relatórios interativos ou logs acessíveis \autocite{perkel2018}. A implementação de tais princípios em um \emph{software} científico não apenas aumenta sua usabilidade, mas também aumenta as citações de seus artigos, aumentando, consequentemente, o alcance dessas metodologias \autocite{mangul2019a}.
+
 \section{O Ecossistema computacional em Metagenômica}\label{o-ecossistema-computacional-em-metagenuxf4mica}
 
 As metodologias de processamento de dados \gls{16S} em grande parte já estão estabelecidas, dada a idade mais avançada da abordagem. Nesse sentido, vemos que o cerne das abordagens trata de atribuir identificadores únicos às sequências 16S obtidas, caracterizando assim táxons distintos. Esses identificadores podem ser atribuídos através de métodos de agrupamento, caracterizando as abordagens baseadas em \gls{OTU}, que agrupam sequências com pelo menos 97\% de identidade em grupos biológicos distintos, ou abordagens baseadas em \gls{ASV}, que, através de modelos estatísticos, tentam definir variações biológicas reais na sequência - contrastadas com variações devido a erros de sequenciamento, e dessa maneira obter uma resolução taxonômica maior comparada às baseadas em \gls{OTU} \autocite{chiarello2022}. Nesse contexto, observamos metodologias que buscam, a partir dos \gls{OTU} ou \gls{ASV} identificados, inferir abundâncias de vias metabólicas específicas, tirando proveito de bancos de dados de informação curada a respeito desses táxons que possua mapeamento das famílias gênicas de seu genoma a funções biológicas \autocite{douglas2020}.
 
 Por outro lado, o campo do desenvolvimento de metodologias para dados de \gls{MS} ainda é bastante fértil, com novas técnicas computacionais desenvolvidas rotineiramente \autocite{liu2021}. De forma geral, podemos agrupar as metodologias em duas grandes categorias: Metodologias livres de montagem, isto é, aquelas que se utilizam apenas da informação contidas nas leituras para obter seus resultados, e metodologias baseadas em montagem, que primeiro realizam a montagem de leituras em sequências contíguas (ou \textit{contigs}), que fornecerá então a base para o processamento seguinte \autocite{breitwieser2019}. Apesar da capacidade que métodos baseados em montagem tem de descobrir novos organismos e montar genomas inéditos, métodos livres de montagem apresentam certas vantagens, sobretudo quando consideramos dados com baixa cobertura de sequência, o que pode resultar em montagens pouco precisas \autocite{ayling2020}.
 
-No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag \autocite{krakau2022} e metaphor \autocite{salazar2023}. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou \emph{pipelines}, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow \autocite{ditommaso2017} ou Snakemake \autocite{mölder2021}, e que adiram a boas práticas de desenvolvimento de \emph{software} científico, como isolamento de dependências, instalação fácil e documentação descritiva, com exemplos \autocite{mangul2019}. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA \autocite{morais2022}, que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
+No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag \autocite{krakau2022} e metaphor \autocite{salazar2023}. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou \emph{pipelines}, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow \autocite{ditommaso2017} ou Snakemake \autocite{mölder2021}. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA \autocite{morais2022}, que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
 
-Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software e que tenha como princípios norteadores a reprodutibilidade, documentação expansiva e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
+Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software científico e que tenha como princípios norteadores a reprodutibilidade, documentação descritiva e prática e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
 
-\section{Desenvolvimento de Software em Bioinformática}\label{desenvolvimento-de-software-em-bioinformuxe1tica}
-\begin{itemize}
-\tightlist
-\item
-  Princípios
-\item
-  Pipelines
-\item
-  Conteinerização
-\item
-  Reprodutibilidade e replicabilidade
-\end{itemize}
 \chapter{Objetivos}\label{obj}
 
 \section{Geral}\label{geral}
@@ -524,7 +522,16 @@ O MicroView também atua como um pacote na linguagem Python de programação, po
 
 Vale ressaltar também os aprimoramentos em padronização de software e parametrização trazidos da mudança do MEDUSA para o EURYALE. Ao implementarmos a metodologia, optamos por utilizar a infraestrutura da nf-core, uma comunidade que busca padronizar o desenvolvimento de fluxos de trabalho que utilizam Nextflow, com ênfase em modularidade, testes contínuos e documentação \autocite{ewels2020}. A comunidade implementa uma suíte de software em Python para a criação e manutenção de fluxos de trabalho (\url{https://nf-co.re/docs/nf-core-tools/installation}), que foi amplamente utilizada no desenvolvimento do EURYALE. Ao utilizarmos das ferramentas e diretrizes da nf-core, pudemos superar algo que foi a principal crítica de usuários em relação ao MEDUSA: A estaticidade das referências e a pouca parametrização.
 
-Quanto ao primeiro ponto, optamos por uma solução que possibilite a utilização de bancos de dados referência equivalentes aos utilizados pelo MEDUSA, que é o que tomamos como padrão da análise. Nesse sentido, implementamos uma entrada alternativa ao fluxo de trabalho (\texttt{-entry\ download}`), que possibilita que os usuários transfiram os bancos de dados referência para sua máquina de análise, alimentando assim o \emph{pipeline} propriamente dito (\textbf{FIGURA DO DIAGRAMA MOSTRANDO ISSO}). Apesar disso, devido à modularidade advinda do \emph{template} \emph{nf-core}, o EURYALE é modelado para funcionar com quaisquer outro banco de dado compatível com as suas ferramentas integrantes. Dessa maneira, o usuário pode tanto modificar os parâmetros de \emph{download} na entrada específica, quanto modificar diretamente os parâmetros de referência presentes na entrada principal do \emph{pipeline}, caso ele possua referências pré-adquiridas. Esses detalhes funcionais distinguem a usabilidade do EURYALE com a de seu precedente, não requerendo que os usuários alterem o código fonte para utilizar referências diferentes.
+Quanto ao primeiro ponto, optamos por uma solução que possibilite a utilização de bancos de dados referência equivalentes aos utilizados pelo MEDUSA, que é o que tomamos como padrão da análise. Nesse sentido, implementamos uma entrada alternativa ao fluxo de trabalho (\texttt{-entry\ download}`), que possibilita que os usuários transfiram os bancos de dados referência para sua máquina de análise, alimentando assim o \emph{pipeline} propriamente dito (Figura \ref{fig:entries}).
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{figure/euryale_entries.drawio} 
+
+}
+
+\caption{Diagrama ilustrando como a entrada de download do EURYALE adquire os bancos de dados que alimentam a entrada principal. Com uma análise típica do zero sendo constituída por ambas etapas.}\label{fig:entries}
+\end{figure}
+Apesar disso, devido à modularidade advinda do \emph{template} \emph{nf-core}, o EURYALE é modelado para funcionar com quaisquer outro banco de dado compatível com as suas ferramentas integrantes. Dessa maneira, o usuário pode tanto modificar os parâmetros de \emph{download} na entrada específica, quanto modificar diretamente os parâmetros de referência presentes na entrada principal do \emph{pipeline}, caso ele possua referências pré-adquiridas. Esses detalhes funcionais distinguem a usabilidade do EURYALE com a de seu precedente, não requerendo que os usuários alterem o código fonte para utilizar referências diferentes.
 
 Além disso, adicionamos mais parâmetros ao EURYALE, parâmetros estes tanto que alterem as etapas de análise quanto aqueles que alteram os recursos computacionais alocados a estas etapas. A exemplo dessa mudança, podemos ver como a metodologia agora apoia um passo opcional de montagem, semelhante ao descrito no artigo original do MEDUSA, no entanto não aplicado diretamente na sua versão orquestrável original. O novo fluxo de trabalho também oferece mais opções de classificação taxonômica, além de parâmetros que possibilitam desabilitar diferentes passos de análise, como a descontaminação de leituras do hospedeiro, possibilitando que a abordagem se adapte a diferentes contextos de análise. Adicionalmente, outro ponto originado pela utilização do template \emph{nf-core} são os diferentes rótulos de alocação de recursos, que permitem um gerenciamento fácil, da quantidade de recursos que pode ser alocada a cada passo de análise, através de um único arquivo de configuração. Essa adição permite que a metodologia seja executada em diferentes infraestruturas computacionais.
 
