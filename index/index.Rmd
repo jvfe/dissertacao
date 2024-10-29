@@ -53,14 +53,14 @@ output:
 abstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), 
   collapse = '\n  ')`
-palavras-chave: [Palavra-chave 1, Palavra-chave 2]
+palavras-chave: [Metagenômica, Fluxos de Trabalho, Reprodutibilidade, Desenvolvimento de Software, Nextflow]
 foreignabstract: |
   `r if(knitr:::is_latex_output()) paste(readLines("00-foreignabstract.Rmd"), 
   collapse = '\n  ')`
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab 
 # is needed on the line after the `|`.
-keyword: [Keyword 1, Keyword 2]
+keyword: [Metagenomics, Pipeline, Reproducibility, Software Development, Nextflow]
 epigrafe: |
   | "Nature uses only the longest threads to weave her patterns, so that each small piece of her fabric reveals the organization of the entire tapestry."
   | (Richard P. Feynman)

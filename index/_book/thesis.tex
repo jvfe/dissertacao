@@ -327,21 +327,33 @@ Voluptatem hic a numquam enim aperiam voluptatem.
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 	\SingleSpacing
-  No resumo são ressaltados o objetivo da pesquisa, o método utilizado, as discussões e os resultados com destaque apenas para os pontos principais. O resumo deve ser significativo, composto de uma sequência de frases concisas, afirmativas, e não de uma enumeração de tópicos. Não deve conter citações. Deve usar o verbo na voz ativa e na terceira pessoa do singular. O texto do resumo deve ser digitado, em um único bloco, sem espaço de parágrafo. O espaçamento entre linhas é simples e o tamanho da fonte é 12. Abaixo do resumo, informar as palavras-chave (palavras ou expressões significativas retiradas do texto) ou, termos retirados de thesaurus da área. Deve conter de 150 a 500 palavras. O resumo é elaborado de acordo com a NBR 6028.
+  Os últimos anos têm testemunhado avanços significativos no estudo de comunidades microbianas complexas, impulsionados pela evolução das tecnologias de sequenciamento e pela crescente adoção de métodos de sequenciamento total do genoma (whole genome shotgun) em detrimento dos métodos, antes mais tradicionais, baseados em amplicon. Com essa evolução, essas abordagens foram desenvolvidas com estratégias computacionais associadas para lidar com os dados que geram. No entanto, esses métodos computacionais geralmente não foram acompanhados por estratégias de design cuidadosas que priorizam o suporte a longo prazo, com baixa necessidade de manutenção, alta acessibilidade de dados e automação de ponta a ponta.
+
+  Neste trabalho, nosso objetivo é, primeiramente, elaborar sobre o cenário computacional em metagenômica e como os métodos atuais podem negligenciar princípios fundamentais de desenvolvimento de software, que os orientariam para uma maior reprodutibilidade, tais como isolamento de dependências, alta parametrização, geração automática de relatórios com figuras interativas que facilitam a exploração de dados e, por fim, documentação descritiva e prática. Em seguida, abordamos as limitações atuais no processamento de dados metagenômicos ao implementar um novo pipeline de análise de dados, o EURYALE, baseado em uma metodologia anterior, o MEDUSA, que selecionou suas ferramentas por meio de rigoroso benchmarking. Esse novo pipeline, adaptável a diferentes cenários e construído com boas práticas de desenvolvimento de software como princípios norteadores, visa avançar o processamento de dados metagenômicos como um todo e, adicionalmente, tornar os dados resultantes desses pipelines de análise acessíveis a um público mais amplo.
 
   \textbf{Palavras-chave}:
-    Palavra-chave 1.
-    Palavra-chave 2.
+    Metagenômica.
+    Fluxos de Trabalho.
+    Reprodutibilidade.
+    Desenvolvimento de Software.
+    Nextflow.
   \end{resumo}
 % resumo em inglês
 \begin{resumo}[Abstract]
 	\SingleSpacing
 	\begin{otherlanguage*}{english}
-		Resumo traduzido para outros idiomas, neste caso, inglês. Segue o formato do resumo feito na língua vernácula. As palavras-chave traduzidas, versão em língua estrangeira, são colocadas abaixo do texto precedidas pela expressão ``Keywords'', separadas por ponto.
+		The past few years have seen significant advances in the study of complex microbial communities associated with the evolution of sequencing technologies and increasing adoption of whole genome shotgun sequencing methods over the once more traditional Amplicon-based methods.
+Through this evolution, these approaches have been built with associated computational strategies to tackle the data they generate. However,
+these computational methods have not been generally accompanied by thoughtful design strategies that prioritise long term support with low maintainability, high data accessibility and end-to-end automation.
+
+In this work, we aim to first elaborate on the computational landscape in metagenomics, and how its methods can disregard fundamental software development principles that guide them towards improved reproducibility, principles such as dependency isolation, high parameterization, automatic report generation, with interactive figures that facilitate data exploration and, finally, descriptive and practical documentation. Following this, we tackle current limitations in metagenomic data processing by implementing a new data analysis pipeline, EURYALE, based on a previous methodology, MEDUSA, that selected its tools through rigorous benchmarking. This new pipeline, adaptable to different scenarios and built with good software development practices as guiding principles, serves to advance metagenomic data processing as a whole, and, additionally, make the data resulting from these analysis pipelines accessible to a wider audience.
 
 		\textbf{Keywords}:
-	      Keyword 1.
-        Keyword 2.
+	      Metagenomics.
+        Pipeline.
+        Reproducibility.
+        Software Development.
+        Nextflow.
     	\end{otherlanguage*}
 \end{resumo}
 %% resumo em francês
@@ -546,12 +558,14 @@ Em última instância, vale ressaltar como a utilização do \emph{template} \em
 \end{figure}
 \chapter{Conclusão}\label{conclusuxe3o}
 
-Ressaltar como avançamos nas metodologias de meta com orquestração e conteinerização,
-priorizando princípios de software sustentável. Na mesma medida, nos baseamos em uma metodologia
-sólida já existente, aprimorando nesses conceitos além de possibilitar melhor interpretabilidade
-com a implementação de uma ferramenta adicional de reporting.
-No entanto, faltar como metodologias de integração de dados metagenomica/metatranscriptomica ainda
-são relativamente escassas, sobretudo considerando-se fluxos de trabalho automatizados e que sigam esses mesmos princípios.
+Ao averiguar o estado do desenvolvimento de \emph{software} em meta-ômica, pudemos observar
+uma baixa aderência a boas práticas de desenvolvimento, sobretudo no que tange \emph{pipelines}
+de análise de dados. Nesse sentido, nos baseamos em uma metodologia anterior parar desenvolvermos um fluxo de trabalho, denominado EURYALE,
+que possibilita uma análise completa de dados de \gls{MS}, e possui isolamento de dependências, alta parametrização, relatórios automáticos com visualizações interativas e uma documentação expansiva, com exemplos práticos.
+Nossa iniciativa com o desenvolvimento do EURYALE não só avança ideais de desenvolvimento de \emph{software} científico, como também facilita com que haja um processamento de dados acurado, estável e sensível.
+No entanto, deve-se ressaltar que, apesar de avançarmos na abordagem fundamental da metagenômica, metodologias de integração de dados
+meta-ômicos, isto é, metagenômico e metatranscriptômico, ainda são relativamente escassas. Este aspecto se torna ainda mais evidente ao considerarmos fluxos de trabalho automatizados que sigam boas práticas de desenvolvimento de \emph{software}.
+Portanto, futuras iniciativas devem ser orientadas para que a realização desses futuros métodos siga também os princípios delineados no presente trabalho.
 
 \postextual
 
@@ -563,6 +577,15 @@ são relativamente escassas, sobretudo considerando-se fluxos de trabalho automa
 
 \markboth{Referências}{REFERÊNCIAS}
 
+\chapter{ANEXO I}\label{anexo-i}
+\begin{center}
+Segue abaixo a documentação servida no \textit{site} do EURYALE
+\bigskip\newline
+\textit{Acessada na data \today}
+\end{center}
+\begin{fichacatalografica}
+    \includepdf[pages={1-}]{papers/documentation.pdf}
+\end{fichacatalografica}
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
