@@ -1,11 +1,13 @@
 # Conclusão
 
-Ressaltar como avançamos nas metodologias de meta com orquestração e conteinerização,
-priorizando princípios de software sustentável. Na mesma medida, nos baseamos em uma metodologia
-sólida já existente, aprimorando nesses conceitos além de possibilitar melhor interpretabilidade
-com a implementação de uma ferramenta adicional de reporting.
-No entanto, faltar como metodologias de integração de dados metagenomica/metatranscriptomica ainda
-são relativamente escassas, sobretudo considerando-se fluxos de trabalho automatizados e que sigam esses mesmos princípios.
+Ao averiguar o estado do desenvolvimento de *software* em meta-ômica, pudemos observar
+uma baixa aderência a boas práticas de desenvolvimento, sobretudo no que tange *pipelines*
+de análise de dados. Nesse sentido, nos baseamos em uma metodologia anterior parar desenvolvermos um fluxo de trabalho, denominado EURYALE, 
+que possibilita uma análise completa de dados de \gls{MS}, e possui isolamento de dependências, alta parametrização, relatórios automáticos com visualizações interativas e uma documentação expansiva, com exemplos práticos. 
+Nossa iniciativa com o desenvolvimento do EURYALE não só avança ideais de desenvolvimento de *software* científico, como também facilita com que haja um processamento de dados acurado, estável e sensível.
+No entanto, deve-se ressaltar que, apesar de avançarmos na abordagem fundamental da metagenômica, metodologias de integração de dados
+meta-ômicos, isto é, metagenômico e metatranscriptômico, ainda são relativamente escassas. Este aspecto se torna ainda mais evidente ao considerarmos fluxos de trabalho automatizados que sigam boas práticas de desenvolvimento de *software*. 
+Portanto, futuras iniciativas devem ser orientadas para que a realização desses futuros métodos siga também os princípios delineados no presente trabalho.
 
 <!-- As conclusões devem responder às questões da pesquisa, em relação aos objetivos  -->
 <!-- e às hipóteses. Devem ser breves, podendo apresentar recomendações e sugestões  -->
