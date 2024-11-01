@@ -396,9 +396,9 @@ In this work, we aim to first elaborate on the computational landscape in metage
 	% ---
 	% inserir lista de tabelas
 	% ---
-	\pdfbookmark[0]{\listtablename}{lot}
-	\listoftables*
-	\cleardoublepage
+	% \pdfbookmark[0]{\listtablename}{lot}
+	% \listoftables*
+	% \cleardoublepage
 	% ---
 
 	% ---
@@ -442,8 +442,15 @@ Dessa maneira, possuímos atualmente, duas possíveis abordagens para se estudar
 
 \section{Desenvolvimento de Software Científico}\label{desenvolvimento-de-software-cientuxedfico}
 
-Metodologias computacionais constituem parte indissociável da biologia molecular moderna, com novas ferramentas, abordagens e fluxos de trabalho, isto é, metodologias que agregam diversas ferramentas em sequência, surgindo a cada momento. Nesse contexto, muito tem se discutido acerca da qualidade do software desenvolvido, não apenas do ponto de vista de qualidade científica ou estatística da análise a ser realizada, mas também qualidade a partir de um ponto de vista técnico.
+Metodologias computacionais constituem parte indissociável da biologia molecular moderna, com novas ferramentas, abordagens e fluxos de trabalho, isto é, metodologias que agregam diversas ferramentas em sequência (Figura \ref{fig:workflow}), surgindo a cada momento. Nesse contexto, muito tem se discutido acerca da qualidade do software desenvolvido, não apenas do ponto de vista de qualidade científica ou estatística da análise a ser realizada, mas também qualidade a partir de um ponto de vista técnico.
+\begin{figure}[H]
 
+{\centering \includegraphics[width=0.7\linewidth]{figure/fluxo_de_trabalho} 
+
+}
+
+\caption{Diagrama que ilustra a estrutura geral de um fluxo de trabalho, compondo ferramentas que realizam diferentes etapas da análise}\label{fig:workflow}
+\end{figure}
 Tipicamente software é tratado como um ponto adjacente à uma análise científica, e não seu principal produto. Parcialmente isto se dá devido ao modelo de desenvolvimento de software científico atualmente vigente, que se dá por meio de projetos de doutorado e mestrado, dificultando, dessa maneira, manutenção a longo prazo \autocite{altschul2013} \autocite{mangul2019a}. Portanto, produzir metodologias que sejam usáveis a longo prazo sem necessitarem de alta manutenção é essencial. Nesse sentido, a utilização de tecnologias que facilitem a instalação de software, como gerenciadores de ambiente, ou tecnologias capazes de encapsular um ambiente computacional, como contêineres, são indispensáveis para a garantia de reprodutibilidade de qualquer método computacional, por garantirem o isolamento das dependências de um \emph{software} indefinidamente \autocite{kadri2022}.
 
 No entanto, garantir a capacidade de instalação do software é um ponto basal para determinar a qualidade de código científico. Outros princípios, aqui denominados como boas práticas de desenvolvimento de software científicos, são igualmente indispensáveis para que uma metodologia seja utilizável a longo prazo, além de capaz de gerar resultados científicos interpretáveis e consistentes. Além da instalabilidade, alguns outros princípios que garantem a qualidade de um software a longo prazo são uma documentação descritiva, com exemplos práticos de utilização, suporte multi-plataforma \autocite{mangul2019} e, para softwares de processamento de dados, relatórios interativos ou logs acessíveis \autocite{perkel2018}. A implementação de tais princípios em um \emph{software} científico não apenas aumenta sua usabilidade, mas também aumenta as citações de seus artigos, aumentando, consequentemente, o alcance dessas metodologias \autocite{mangul2019a}.
