@@ -1,0 +1,128 @@
+---
+title: "O Ecossistema Computacional da Metagenômica"
+subtitle: "Fluxos de Trabalho e Reprodutibilidade"
+author: "João Vitor Cavalcante"
+lang: pt
+bibliography: refs.bib
+csl: diabetologia.csl
+format: 
+  revealjs:
+    theme: "night"
+    transition: fade
+    slide-number: true
+    multiplex: true # audience can follow along w/ mobile devices
+    fragments: true
+    logo: https://i.imgur.com/ena8fiz.png
+---
+
+# Introdução
+
+## Visão Geral - Metagenômica {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- A técnica do *whole-genome sequencing* possibilitou o sequenciamento
+do conteúdo genético total de amostras ambientais, originando a metagenômica *shotgun* (MS)
+
+- A MS gera um alto volume de dados, e portanto, há a necessidade do desenvolvimento de
+ferramentas computacionais que processem esses dados e gerem informação científica que descreva de 
+forma acurada e reproduzível achados acerca do microambiente de estudo
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![](https://i.imgur.com/ma0INe4.png)
+:::
+
+::::
+
+## Desenvolvimento de Software Científico {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Metodologias computacionais constituem parte indissociável da biologia molecular moderna
+
+- A agregação de ferramentas computacionais em sequência, ou fluxos de trabalho, 
+surgem como *softwares* que prezam um método reprodutível baseado em ferramentas previamente curadas.
+
+- Metodologias que possuam estabilidade a longo prazo, alta instalabilidade e parametrização, documentação descritiva e
+resultados facilmente explorávels é essencial para o avanço das análises moleculares.
+
+:::
+
+::: {.column width="40%" style="text-align: center;"}
+![](./index/figure/fluxo_de_trabalho.png)
+:::
+
+::::
+
+
+## O Ecossistema Computacional em Metagenômica {.smaller}
+
+- Podemos agrupar as metodologias da MS em duas grandes categorias: As baseadas em montagem e as livres de montagem.
+
+- As baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de MS, mas as livres de montagem são escassas,
+sobretudo ao considerarmos boas práticas de desenvolvimento de software científico. Nesse contexto, destaca-se o MEDUSA
+
+- Há a necessidade de desenvolver uma metodologia para dados de MS que siga boas práticas de desenvolvimento de software científico
+
+# Objetivo
+
+- Obter uma visão geral do ecossistema computacional em metagenômica atual
+e como ele se associa com princípios de desenvolvimento de software científico, de-
+senvolvendo então uma metodologia para dados de MS que possibilite uma análisa
+metagenômica compreensiva, de forma reprodutível e flexível.
+
+# Capítulo I
+
+![](./index/figure/paper1.png)
+
+# Capítulo II
+
+![](./index/figure/paper2.png)
+
+# Discussão
+
+---
+
+![](index/figure/euryale_entries.drawio.png)
+
+- Diagrama ilustrando como a entrada de download do EURYALE adquire
+os bancos de dados que alimentam a entrada principal. Com uma análise
+típica do zero sendo constituída por ambas etapas.
+
+--- 
+
+![](index/figure/multiqc_example.png)
+
+- Exemplo do cabeçalho de um relatório gerado através da ferramenta MultiQC, 
+implementada como parte integrante do EURYALE.
+
+--- 
+
+![](index/figure/microview_example.png)
+- Exemplo do cabeçalho de um relatório gerado através da ferramenta Microview, 
+escrita em Python e implementada como parte integrante do EURYALE.
+
+
+---
+
+![](index/figure/seqera_platform_example.png)
+- Porção inicial da interface gráfica do EURYALE na Seqera Platform
+(<https://cloud.seqera.io/>).
+
+# Conclusões
+
+- Observamos uma baixa aderência a boas práticas de desenvolvimento, sobretudo no
+que tange pipelines de análise de dados
+
+- Desenvolvemos o EURYALE, que possibilita uma análise completa de dados de MS e adere aos princípios já citados
+
+- No entanto, metodologias de integração de dados meta-ômicos que sigam as boas práticas ainda são escassos
+
+
+# Referências {.scrollable}
+
+::: {#refs}
+:::
