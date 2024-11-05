@@ -78,9 +78,145 @@ metagenômica compreensiva, de forma reprodutível e flexível.
 
 ![](./index/figure/paper1.png)
 
+## Software em meta-ômica possibilitou novas descobertas
+
+- No entanto, esses *softwares* ainda possuem muitos desafios a frente.
+
+- Instalabilidade, acessibilidade ao usuário e portabilidade são desafios não apenas em meta-ômica mas bioinformática como um todo.
+
+- Esses desafios podem ser enfrentados com empacotamento de código, tecnologia de contêiner, curadoria do ferramentário
+e orquestradores de fluxo de trabalho
+
+## A adoção de boas práticas de software em Meta-ồmica {.smaller}
+
+- Apesar da ciência da computação favorecer reprodutibilidade, ela ainda é negligenciada, devido 
+a dificuldades em instalação, execução e documentação. 
+
+- O uso de uma única versão de *software*, disponibilizada através de tecnologias de contêineres
+como Docker e Singularity aumentam a instalabilidade, a estabilidade a longo prazo e até taxas de citação
+do software.
+
+- A utilização de orquestradores de fluxos de trabalho, para análises que envolvem várias ferramentas em sequência,
+também se torna indispensável para garantir maior reprodutibilidade, além facilidades na execução, aumentando também
+a acessibilidade ao usuário.
+
+## Avaliação geral {.smaller}
+
+- Não houve ainda uma avaliação da implementação dessas tecnologias em meta-ômica, o que pode apontar 
+para uma baixa adoção.
+
+- Ademais, sugerimos que, após uma avaliação de fluxos de trabalho citados em uma revisão de metatranscriptômica,
+a aderência a esses princípios é ainda mais baixa ao considerarmos essa abordagem.
+
+![](./index/figure/table_paper1.png){width=500}
+
+## Em conclusão
+
+- *Software* para metagenômica e metatranscriptômica precisam ser desenvolvidos com
+clareza, reprodutibilidade e reutilização como princípios guiadores.
+
+- A baixa aderência a esses princípios é ainda mais claro ao avaliar o estado do *software*
+em metatranscriptômica e integração de dados.
+
+- A adoção dessas diretrizes não só ilustra a qualidade dessas metodologias computacionais,
+mas também garante que sejam capazes de suportados a longo prazo.
+
 # Capítulo II
 
 ![](./index/figure/paper2.png)
+
+## Fluxos de trabalho para metagenômica
+
+- Entre os livres de montagem, há um destaque no MEDUSA, que realizou uma curadoria
+cuidadosa dos softwares a serem incluídos através de um benchmarking de performance e sensitividade.
+
+- No entanto, MEDUSA possuía algumas limitações: BioConda, Snakemake e referências estáticas
+
+## Introduzindo EURYALE {.smaller}
+
+<center>
+![](https://github.com/dalmolingroup/euryale/blob/main/assets/euryale_logo.png?raw=true){width=500}
+</center>
+
+- Mais portável, com execução em Docker ou Singularity, e suporte nativo a gerenciadores de lote como SLURM.
+
+- Mais parametrizável, possibilitando o uso opcional de diferentes etapas de análise e se adaptando a diferentes referências
+
+- Mais acessível, com a geração de relatórios automáticos e interativos que possibilitam uma melhor exploração de dados.
+
+## Metodologia
+
+- Utilizamos o template nf-core, que valoriza boas práticas de desenvolvimento de software e, dentre outras coisas,
+possibilita fácil adaptação a diferentes usos de recursos.
+
+- MicroView, ferramenta desenvolvida para o *pipeline* gerar relatórios automatizados de métricas de diversidade,
+é feita em Python e depende no Scikit-Bio.
+
+---
+
+<center>
+![](index/figure/paper2_fig1.png)
+</center>
+
+- Diagrama ilustrando cada passo do fluxo de trabalho EURYALE, se iniciando com leituras FASTQ como entrada. Círculos são passos habilitados, quadrados passos desabilitados por padrão.
+
+- Diferente do antecessor, o EURYALE possibilita o uso de novas referências, mas com suporte para as referências do MEDUSA através da entrada *download* (`-entry download`)
+
+## Detalhes da implementação
+
+- Nova ferramenta de classificação, Kraken2, visto o suporte que a ferramenta têm obtido no tempo após o desenvolvimento do MEDUSA.
+
+- Exemplo de execução em Docker:
+
+```bash
+nextflow run dalmolingroup/euryale \
+  --input samplesheet.csv \
+  --outdir <output directory> \
+  --kaiju_db <kaiju database> \
+  --reference_fasta <reference FASTA> \
+  --host_fasta <host reference FASTA> \
+  --id_mapping <ID mapping file> \
+  -profile docker
+```
+
+## Relatórios automatizados {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Além das visualizações Krona para cada amostra, também implementamos MultiQC e MicroView no EURYALE.
+
+- Figura incluída como parte do relatório MultiQC do EURYALE. A: Figura da etapa de controle de qualidade; B: Figura da etapa de classificação taxonômica.
+
+:::
+
+::: {.column width="40%" style="text-align: center;"}
+![](index/figure/paper2_fig2.png)
+:::
+
+::::
+
+## Relatórios automatizados {.smaller}
+
+<center>
+![](index/figure/paper2_fig3.png)
+</center>
+
+- Figura incluída como parte do relatório MicroView do EURYALE. Um gráfico de dispersão interativo de Equabilidade de Pielou e diversidade de Shannon.
+
+- O MicroView também gera visualizações da diversidade Bray-Curtis e abundâncias relativas de cada táxon em cada amostra.
+
+- Também pode ser executado de forma isolada fora do *pipeline*
+
+## Conclusões
+
+<center>
+![](https://github.com/dalmolingroup/euryale/blob/main/assets/euryale_logo.png?raw=true){width=500}
+</center>
+
+- EURYALE se aproveita da sensitividade e cuidadosa curadoria ferramental do seu antecessor
+
+- Melhora em termos de parametrização, suporte a longo prazo, adaptabilidade a diferentes contextos e acessibilidade de dados.
 
 # Discussão
 
