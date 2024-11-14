@@ -220,6 +220,15 @@ nextflow run dalmolingroup/euryale \
 
 # Discussão
 
+- Averiguamos limitações na adoção de boas práticas em fluxos de trabalho em meta-ômica 
+
+- Aplicamos os príncipios postos a uma metodologia, construída através de rigoroso *benchmarking*, MEDUSA
+
+- Através disso, construímos o EURYALE:
+  - Maior parametrização
+  - Documentação descritiva
+  - Maior acessibilidade de dados
+
 ---
 
 ![](index/figure/euryale_entries.drawio.png)
