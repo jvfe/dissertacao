@@ -94,26 +94,7 @@
     code span.va { color: #00e0e0; } /* Variable */
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -432,6 +413,20 @@ João Vitor Cavalcante
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
+<li><p>A história da vida microscópica, ou microbiana, no planeta Terra supera a his- tória da vida macroscópica por milhares de anos</p></li>
+<li><p>Avanços no que viria eventualmente a se tornar a metagenômica surgem ainda nos anos 90, com o primeiro sequenciamento de genoma completo de um organismo de vida livre, a bactéria Haemophilus influenza</p></li>
+<li><p>No entanto, os primeiros estudos de microbioma tiram proveito da técnica de 16S</p></li>
+</ul>
+</div><div class="column" style="text-align: center;">
+<p><img data-src="https://i.imgur.com/ma0INe4.png"></p>
+</div>
+</div>
+</section>
+<section id="visão-geral---metagenômica-1" class="slide level2 smaller">
+<h2>Visão Geral - Metagenômica</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
 <li><p>A técnica do <em>whole-genome sequencing</em> possibilitou o sequenciamento do conteúdo genético total de amostras ambientais, originando a metagenômica <em>shotgun</em> (MS)</p></li>
 <li><p>A MS gera um alto volume de dados, e portanto, há a necessidade do desenvolvimento de ferramentas computacionais que processem esses dados e gerem informação científica que descreva de forma acurada e reproduzível achados acerca do microambiente de estudo</p></li>
 </ul>
@@ -440,6 +435,20 @@ João Vitor Cavalcante
 </div>
 </div>
 </section>
+<section id="as-etapas-da-análise-metagenômica" class="slide level2 smaller">
+<h2>As etapas da análise metagenômica</h2>
+<ul>
+<li>A análise de dados de metagenômica é realizada de acordo com seu contexto, mas podemos elencar passos fundamentais a praticamente toda metodologia:
+<ul>
+<li>Pré-processamento das leituras para controle de qualidade
+<ul>
+<li>Pode abarcar descontaminação, caso amostra seja associada a um hospedeiro</li>
+</ul></li>
+<li>Classificação taxonômica</li>
+<li>Anotação funcional</li>
+</ul></li>
+</ul>
+</section>
 <section id="desenvolvimento-de-software-científico" class="slide level2 smaller">
 <h2>Desenvolvimento de Software Científico</h2>
 <div class="columns">
@@ -447,7 +456,7 @@ João Vitor Cavalcante
 <ul>
 <li><p>Metodologias computacionais constituem parte indissociável da biologia molecular moderna</p></li>
 <li><p>A agregação de ferramentas computacionais em sequência, ou fluxos de trabalho, surgem como <em>softwares</em> que prezam um método reprodutível baseado em ferramentas previamente curadas.</p></li>
-<li><p>Metodologias que possuam estabilidade a longo prazo, alta instalabilidade e parametrização, documentação descritiva e resultados facilmente explorávels é essencial para o avanço das análises moleculares.</p></li>
+<li><p>Metodologias com estabilidade a longo prazo, alta instalabilidade e parametrização, documentação descritiva e resultados facilmente exploráveis.</p></li>
 </ul>
 </div><div class="column" style="text-align: center;">
 <p><img data-src="./index/figure/fluxo_de_trabalho.png"></p>
@@ -465,7 +474,7 @@ João Vitor Cavalcante
 <section id="objetivo" class="title-slide slide level1 center">
 <h1>Objetivo</h1>
 <ul>
-<li>Obter uma visão geral do ecossistema computacional em metagenômica atual e como ele se associa com princípios de desenvolvimento de software científico, de- senvolvendo então uma metodologia para dados de MS que possibilite uma análisa metagenômica compreensiva, de forma reprodutível e flexível.</li>
+<li>Obter uma visão geral do ecossistema computacional em metagenômica atual e como ele se associa com princípios de desenvolvimento de software científico, desenvolvendo então uma metodologia para dados de MS que possibilite uma análisa metagenômica compreensiva, de forma reprodutível e flexível.</li>
 </ul>
 </section>
 
@@ -485,23 +494,30 @@ João Vitor Cavalcante
 <section id="a-adoção-de-boas-práticas-de-software-em-meta-ồmica" class="slide level2 smaller">
 <h2>A adoção de boas práticas de software em Meta-ồmica</h2>
 <ul>
-<li><p>Apesar da ciência da computação favorecer reprodutibilidade, ela ainda é negligenciada, devido a dificuldades em instalação, execução e documentação.</p></li>
+<li><p>Apesar da computação favorecer reprodutibilidade, ela ainda é negligenciada, devido a dificuldades em instalação, execução e documentação.</p></li>
 <li><p>O uso de uma única versão de <em>software</em>, disponibilizada através de tecnologias de contêineres como Docker e Singularity aumentam a instalabilidade, a estabilidade a longo prazo e até taxas de citação do software.</p></li>
-<li><p>A utilização de orquestradores de fluxos de trabalho, para análises que envolvem várias ferramentas em sequência, também se torna indispensável para garantir maior reprodutibilidade, além facilidades na execução, aumentando também a acessibilidade ao usuário.</p></li>
+<li><p>A utilização de orquestradores de fluxos de trabalho, para análises que envolvem várias ferramentas em sequência, também se torna indispensável para garantir maior reprodutibilidade, além de facilidades na execução, aumentando também a acessibilidade ao usuário.</p></li>
 </ul>
 </section>
 <section id="avaliação-geral" class="slide level2 smaller">
 <h2>Avaliação geral</h2>
 <ul>
 <li><p>Não houve ainda uma avaliação da implementação dessas tecnologias em meta-ômica, o que pode apontar para uma baixa adoção.</p></li>
-<li><p>Ademais, sugerimos que, após uma avaliação de fluxos de trabalho citados em uma revisão de metatranscriptômica, a aderência a esses princípios é ainda mais baixa ao considerarmos essa abordagem.</p></li>
+<li><p>Ademais, sugerimos que, após uma avaliação de fluxos de trabalho citados em uma revisão de metatranscriptômica, a aderência a esses princípios é ainda baixa.</p></li>
 </ul>
 
 <img data-src="./index/figure/table_paper1.png" width="500" class="r-stretch"></section>
+<section id="o-cenário-está-mudando" class="slide level2 smaller">
+<h2>O cenário está mudando</h2>
+<ul>
+<li><p>O uso de tecnologias de orquestração de <em>pipelines</em> é crescente, algo evidente com o número crescente de citações a artigos que descrevem essas tecnologias, como Nextflow, Snakemake e Galaxy.</p></li>
+<li><p>Apesar disso, avanços têm sido feitos na área de integração de dados meta-ômicos, com um pipeline Galaxy recente possibilitando uma análise intercomunicável entre 3 fluxos de trabalho. No entanto, ainda há preocupações acerca da limitação à infraestrutura do Galaxy e iniciativas semelhantes ainda não foram vistas em outras plataformas.</p></li>
+</ul>
+</section>
 <section id="em-conclusão" class="slide level2">
 <h2>Em conclusão</h2>
 <ul>
-<li><p><em>Software</em> para metagenômica e metatranscriptômica precisam ser desenvolvidos com clareza, reprodutibilidade e reutilização como princípios guiadores.</p></li>
+<li><p><em>Softwares</em> para metagenômica e metatranscriptômica precisam ser desenvolvidos com clareza, reprodutibilidade e reutilização como princípios guiadores.</p></li>
 <li><p>A baixa aderência a esses princípios é ainda mais claro ao avaliar o estado do <em>software</em> em metatranscriptômica e integração de dados.</p></li>
 <li><p>A adoção dessas diretrizes não só ilustra a qualidade dessas metodologias computacionais, mas também garante que sejam capazes de suportados a longo prazo.</p></li>
 </ul>
@@ -514,6 +530,10 @@ João Vitor Cavalcante
 <section id="fluxos-de-trabalho-para-metagenômica" class="slide level2">
 <h2>Fluxos de trabalho para metagenômica</h2>
 <ul>
+<li><p>Podem ser divididos entre: <em>baseados em montagem</em> e <em>livres de montagem</em>.</p>
+<ul>
+<li>Entre os baseados em montagem, destacam-se vários que seguem os princípios delineados no artigo anterior, como nf-core/mag e Metaphor.</li>
+</ul></li>
 <li><p>Entre os livres de montagem, há um destaque no MEDUSA, que realizou uma curadoria cuidadosa dos softwares a serem incluídos através de um benchmarking de performance e sensitividade.</p></li>
 <li><p>No entanto, MEDUSA possuía algumas limitações: BioConda, Snakemake e referências estáticas</p></li>
 </ul>
@@ -532,19 +552,25 @@ João Vitor Cavalcante
 <section id="metodologia" class="slide level2">
 <h2>Metodologia</h2>
 <ul>
-<li><p>Utilizamos o template nf-core, que valoriza boas práticas de desenvolvimento de software e, dentre outras coisas, possibilita fácil adaptação a diferentes usos de recursos.</p></li>
+<li><p>Utilizamos o template nf-core, com a linguagem Nextflow, que valoriza boas práticas de desenvolvimento de software e, dentre outras coisas, possibilita fácil adaptação a diferentes usos de recursos.</p></li>
 <li><p>MicroView, ferramenta desenvolvida para o <em>pipeline</em> gerar relatórios automatizados de métricas de diversidade, é feita em Python e depende no Scikit-Bio.</p></li>
 </ul>
+<center>
+<p><img data-src="https://raw.githubusercontent.com/nf-core/logos/master/nf-core-logos/nf-core-logo-darkbg.png#gh-dark-mode-only" width="400"></p>
+<img data-src="https://github.com/nextflow-io/nextflow/raw/master/docs/_static/nextflow-logo-bg-dark.png" width="400">
+</center>
 </section>
 <section class="slide level2">
 
 <center>
 <img data-src="index/figure/paper2_fig1.png">
 </center>
+<div class="smaller">
 <ul>
 <li><p>Diagrama ilustrando cada passo do fluxo de trabalho EURYALE, se iniciando com leituras FASTQ como entrada. Círculos são passos habilitados, quadrados passos desabilitados por padrão.</p></li>
 <li><p>Diferente do antecessor, o EURYALE possibilita o uso de novas referências, mas com suporte para as referências do MEDUSA através da entrada <em>download</em> (<code>-entry download</code>)</p></li>
 </ul>
+</div>
 </section>
 <section id="detalhes-da-implementação" class="slide level2">
 <h2>Detalhes da implementação</h2>
@@ -561,10 +587,11 @@ João Vitor Cavalcante
 <span id="cb1-7"><a href=""></a>  <span class="at">--id_mapping</span> <span class="op">&lt;</span>ID mapping file<span class="op">&gt;</span> <span class="dt">\</span></span>
 <span id="cb1-8"><a href=""></a>  <span class="at">-profile</span> docker</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="relatórios-automatizados" class="slide level2 smaller">
-<h2>Relatórios automatizados</h2>
+<section class="slide level2">
+
 <div class="columns">
 <div class="column" style="width:50%;">
+<h3 id="relatório-automatizados">Relatório automatizados</h3>
 <ul>
 <li><p>Além das visualizações Krona para cada amostra, também implementamos MultiQC e MicroView no EURYALE.</p></li>
 <li><p>Figura incluída como parte do relatório MultiQC do EURYALE. A: Figura da etapa de controle de qualidade; B: Figura da etapa de classificação taxonômica.</p></li>
@@ -574,7 +601,7 @@ João Vitor Cavalcante
 </div>
 </div>
 </section>
-<section id="relatórios-automatizados-1" class="slide level2 smaller">
+<section id="relatórios-automatizados" class="slide level2 smaller">
 <h2>Relatórios automatizados</h2>
 <center>
 <img data-src="index/figure/paper2_fig3.png">
@@ -629,7 +656,10 @@ João Vitor Cavalcante
 </section>
 <section class="slide level2">
 
-<p><img data-src="index/figure/seqera_platform_example.png"> - Porção inicial da interface gráfica do EURYALE na Seqera Platform (<a href="https://cloud.seqera.io/" class="uri">https://cloud.seqera.io/</a>).</p>
+
+<img data-src="index/figure/seqera_platform_example.png" width="900" class="r-stretch"><ul>
+<li>Porção inicial da interface gráfica do EURYALE na Seqera Platform (<a href="https://cloud.seqera.io/" class="uri">https://cloud.seqera.io/</a>).</li>
+</ul>
 </section></section>
 <section id="conclusões-1" class="title-slide slide level1 center">
 <h1>Conclusões</h1>
@@ -638,13 +668,15 @@ João Vitor Cavalcante
 <li><p>Desenvolvemos o EURYALE, que possibilita uma análise completa de dados de MS e adere aos princípios já citados</p></li>
 <li><p>No entanto, metodologias de integração de dados meta-ômicos que sigam as boas práticas ainda são escassos</p></li>
 </ul>
+<!-- # Referências {.scrollable} -->
+<!-- ::: {#refs} -->
+<!-- ::: -->
 </section>
 
-<section id="referências" class="title-slide slide level1 scrollable smaller">
-<h1>Referências</h1>
-<div id="refs" role="list">
-
-</div>
+<section id="o-ecossistema-computacional-da-metagenômica" class="title-slide slide level1 center" style="text-align: center;">
+<h1>O Ecossistema Computacional da Metagenômica</h1>
+<p>Fluxos de Trabalho e Reprodutibilidade</p>
+<p>João Vitor Cavalcante</p>
 <div class="quarto-auto-generated-content">
 <p><img src="https://i.imgur.com/ena8fiz.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -686,7 +718,7 @@ João Vitor Cavalcante
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'multiplex': {"secret":null,"id":"3cb78e82d17c7b2a","url":"https://reveal-multiplex.glitch.me/"},
-'smaller': false,
+'smaller': true,
  
         // Display controls in the bottom right corner
         controls: false,
