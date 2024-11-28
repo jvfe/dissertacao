@@ -6,7 +6,7 @@
 \bigskip\newline
 Escrito por: João Vitor Ferreira Cavalcante, Iara Dantas de Souza, Diego Arthur de Azevedo Morais e Rodrigo Juliani Siqueira Dalmolin
 \bigskip\newline
-\textit{Artigo submetido ao periódico IEEE Access}
+\textit{Artigo a ser submetido ao periódico IEEE Access}
 
 \end{center}
 ```
