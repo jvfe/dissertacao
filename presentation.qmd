@@ -14,13 +14,8 @@ format:
     fragments: true
     logo: https://i.imgur.com/ena8fiz.png
     smaller: true
+    css: pres_styles.css
 ---
-<style>
-pre, code, .sourceCode {
-  font-size: 2rem;
-}
-</style>
-
 
 # Introdução
 
