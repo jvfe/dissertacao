@@ -100,9 +100,14 @@ sobretudo ao considerarmos boas práticas de desenvolvimento de software cientí
 # Objetivo
 
 - Obter uma visão geral do ecossistema computacional em metagenômica atual
-e como ele se associa com princípios de desenvolvimento de software científico, 
-desenvolvendo então uma metodologia para dados de MS que possibilite uma análisa
-metagenômica compreensiva, de forma reprodutível e flexível.
+e como ele se associa com princípios de desenvolvimento de software científico, desenvolvendo então uma metodologia para dados de MS que possibilite uma análise metagenômica compreensiva, de forma reprodutível e flexível.
+
+# Objetivos específicos
+
+  - Avaliar o atual ferramentário computacional para dados de meta-ômica e sua
+adesão a princípios de desenvolvimento de software sustentável.
+  - Desenvolver uma metodologia robusta, flexível e acessível para análise de dados
+de MS.
 
 # Capítulo I
 
