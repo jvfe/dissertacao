@@ -24,8 +24,7 @@ format:
 :::: {.columns}
 
 ::: {.column width="45%"}
-- A história da vida microscópica, ou microbiana, no planeta Terra supera a his-
-tória da vida macroscópica por milhares de anos;
+- A história da vida microscópica, ou microbiana, no planeta Terra supera a história da vida macroscópica por milhares de anos;
 
 - Avanços no que viria eventualmente a se tornar a metagenômica surgem ainda nos anos 90, com o primeiro sequenciamento de genoma completo de um organismo de vida livre, a bactéria Haemophilus influenza;
 
