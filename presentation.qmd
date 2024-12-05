@@ -222,8 +222,6 @@ possibilita fácil adaptação a diferentes usos de recursos.
 
 ## Detalhes da implementação
 
-- Nova ferramenta de classificação, Kraken2, visto o suporte que a ferramenta têm obtido no tempo após o desenvolvimento do MEDUSA.
-
 - Exemplo de execução em Docker:
 
 ```bash
