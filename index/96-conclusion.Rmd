@@ -1,7 +1,7 @@
 # Conclusão
 
 Ao averiguar o estado do desenvolvimento de *software* em meta-ômica, pudemos observar
-uma baixa aderência a boas práticas de desenvolvimento, sobretudo no que tange *pipelines*
+uma baixa aderência a boas práticas de desenvolvimento, sobretudo no que tange *workflows*
 de análise de dados. Nesse sentido, nos baseamos em uma metodologia anterior parar desenvolvermos um fluxo de trabalho, denominado EURYALE, 
 que possibilita uma análise completa de dados de \gls{MS}, e possui isolamento de dependências, alta parametrização, relatórios automáticos com visualizações interativas e uma documentação expansiva, com exemplos práticos. 
 Nossa iniciativa com o desenvolvimento do EURYALE não só avança ideais de desenvolvimento de *software* científico, como também facilita com que haja um processamento de dados acurado, estável e sensível.

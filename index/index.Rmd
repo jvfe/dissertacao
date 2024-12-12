@@ -60,7 +60,7 @@ foreignabstract: |
 # If you'd rather include the preliminary content in files instead of inline
 # like below, use a command like that for the abstract above.  Note that a tab 
 # is needed on the line after the `|`.
-keyword: [Metagenomics, Pipeline, Reproducibility, Software Development, Nextflow]
+keyword: [Metagenomics, Workflow, Reproducibility, Software Development, Nextflow]
 epigrafe: |
   | "Nature uses only the longest threads to weave her patterns, so that each small piece of her fabric reveals the organization of the entire tapestry."
   | (Richard P. Feynman)
@@ -71,7 +71,7 @@ dedication: |
   Para meus pais, que me mostraram que isso era possível.
 thanks: |
  | Agradeço a meus amigos do BioME, colegas na jornada acadêmica, que me forneceram várias discussões, sobre pesquisa ou não, várias descontrações - a tradição do 4 e mate - e várias (necessárias) distrações, além de muitas e muitas perguntas. 
- | Mais que tudo isso, vocês me deram o sentimento de fazer parte de uma comunidade. Agradeço a todos vocês, mas em especial a Julia, ao Diego, ao Epitácio, ao Gleison, ao Bruno e a Bianca.
+ | Mais que tudo isso, vocês me deram o sentimento de fazer parte de uma comunidade. Agradeço a todos vocês, mas em especial a Julia, ao Diego, ao Epitácio, ao Gleison, a Rafa, ao Bruno e a Bianca.
  |
  | Agradeço ao Rodrigo, por me dar tanta liberdade para executar meu trabalho, pela confiança constante no meu futuro e no caminho que estou trilhando e pelos conselhos precisos quando este caminho deu algumas voltas caóticas.
  |
@@ -84,7 +84,7 @@ thanks: |
  | Agradeço a Beatriz, que sabe que seu impacto é tanto que apenas algumas linhas em um documento acadêmico seria insuficiente ou talvez até desrespeitoso, e que também sabe que já te agradeço tanto em tudo que faço a ponto de ficar repetitivo.
  | Te amo. Obrigado por estar aqui para mim, me mostrando a importância de ser feliz.
  |
- | Por fim, agradeço em dobro a todos que aqui não foram nomeados, mas que, de uma forma ou de outra, tiveram um impacto tangível na minha vida. Peço apenas que possam perdoar esse terrível lapso.
+ | Por fim, agradeço em dobro a todos que aqui não foram nomeados, mas que, de uma forma ou de outra, tiveram um impacto tangível na minha trajetória. Peço apenas que possam perdoar esse terrível lapso.
 # If you prefer blank lines between paragraphs, un-silence lines  74-75 (this 
 # requires package tikz)
 header-includes:
@@ -135,6 +135,6 @@ As metodologias de processamento de dados \gls{16S} em grande parte já estão e
 
 Por outro lado, o campo do desenvolvimento de metodologias para dados de \gls{MS} ainda é bastante fértil, com novas técnicas computacionais desenvolvidas rotineiramente [@liu2021]. De forma geral, podemos agrupar as metodologias em duas grandes categorias: Metodologias livres de montagem, isto é, aquelas que se utilizam apenas da informação contidas nas leituras para obter seus resultados, e metodologias baseadas em montagem, que primeiro realizam a montagem de leituras em sequências contíguas (ou \textit{contigs}), que fornecerá então a base para o processamento seguinte [@breitwieser2019]. Apesar da capacidade que métodos baseados em montagem tem de descobrir novos organismos e montar genomas inéditos, métodos livres de montagem apresentam certas vantagens, sobretudo quando consideramos dados com baixa cobertura de sequência, o que pode resultar em montagens pouco precisas [@ayling2020].
 
-No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag [@krakau2022] e metaphor [@salazar2023]. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou *pipelines*, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow [@ditommaso2017] ou Snakemake [@mölder2021]. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA [@morais2022], que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
+No que se diz respeito a essas metodologias, vemos que as baseadas em montagem são amplas e cobrem os mais diversos aspectos do processamento de dados de \gls{MS}, com exemplos como nf-core/mag [@krakau2022] e metaphor [@salazar2023]. No entanto, quando observamos métodos livres de montagem, vemos um cenário mais escasso, sobretudo quando consideramos apenas fluxos de trabalho, ou *workflows*, orquestrados por linguagems de gerenciamento de metodologias científicas, como Nextflow [@ditommaso2017] ou Snakemake [@mölder2021]. No contexto de métodos livres de montagem para dados \gls{MS}, vale ressaltar o fluxo de trabalho MEDUSA [@morais2022], que apresentou boa sensitividade e flexibilidade para análises de classificação taxonômica e anotação funcional.
 
 Nesse sentido, há a necessidade de desenvolver uma metodologia para dados de \gls{MS} que siga boas práticas de desenvolvimento de software científico e que tenha como princípios norteadores a reprodutibilidade, documentação descritiva e prática e interpretabilidade. Este último ponto que se torna especialmente relevante ao considerarmos a complexidade e a alta dimensionalidade desses dados.
