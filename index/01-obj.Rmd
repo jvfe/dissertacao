@@ -17,4 +17,5 @@ para dados de \gls{MS} que possibilite uma análisa metagenômica compreensiva, 
 ## Específicos
 
 - Avaliar o atual ferramentário computacional para dados de metagenômica e sua adesão a princípios de desenvolvimento de software sustentável.
-- Desenvolver uma metodologia robusta, flexível e acessível para análise de dados de \gls{MS}.
+- Analisar as vantagens e limitações da ferramenta computacional MEDUSA.
+- Desenvolver uma metodologia robusta, flexível e acessível, baseada no MEDUSA, para análise de dados de \gls{MS}.
