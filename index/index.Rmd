@@ -79,12 +79,14 @@ thanks: |
  | 
  | Agradeço aos amigos feitos nesses vários eventos, em especial Débora e Pedro.
  | 
- | Agradeço às instituições brasileiras que me possibilitaram fazer pesquisa, como a CAPES, pelo fomento. Agradeço sobretudo aos inúmeros trabalhadores nessas instituições que as fazem funcionar, apesar das limitações financeiras e estruturais do Brasil.
+ | Agradeço às instituições brasileiras que me possibilitaram fazer pesquisa. Agradeço à CAPES pelo fomento. Agradeço sobretudo aos inúmeros trabalhadores nessas instituições que as fazem funcionar, apesar das limitações financeiras e estruturais do Brasil.
  | 
  | Agradeço a Beatriz, que sabe que seu impacto é tanto que apenas algumas linhas em um documento acadêmico seria insuficiente ou talvez até desrespeitoso, e que também sabe que já te agradeço tanto em tudo que faço a ponto de ficar repetitivo.
  | Te amo. Obrigado por estar aqui para mim, me mostrando a importância de ser feliz.
  |
  | Por fim, agradeço em dobro a todos que aqui não foram nomeados, mas que, de uma forma ou de outra, tiveram um impacto tangível na minha trajetória. Peço apenas que possam perdoar esse terrível lapso.
+ |
+ | O presente trabalho foi realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) – Código de Financiamento 001.
 # If you prefer blank lines between paragraphs, un-silence lines  74-75 (this 
 # requires package tikz)
 header-includes:
